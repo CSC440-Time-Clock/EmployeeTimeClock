@@ -55,7 +55,7 @@ namespace EmployeeTimeClock
 
         private void editScheduleButton_Click(object sender, EventArgs e)
         {
-            editTimesheetGroupBox.BringToFront();
+            editScheduleGroupBox.BringToFront();
         }
 
         private void availabilityButton_Click(object sender, EventArgs e)
