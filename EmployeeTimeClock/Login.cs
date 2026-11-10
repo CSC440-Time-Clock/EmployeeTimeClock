@@ -21,13 +21,13 @@ namespace EmployeeTimeClock
         {
             if (usernameTextBox.Text == "1")
             {
-                Manager managerForm = new Manager();
+                Manager managerForm = new Manager(this);
                 managerForm.Show();
                 this.Hide();
             }
             else if (usernameTextBox.Text == "2")
             {
-                Employee employeeForm = new Employee();
+                Employee employeeForm = new Employee(this);
                 employeeForm.Show();
                 this.Hide();
             }
@@ -35,6 +35,8 @@ namespace EmployeeTimeClock
             {
                 MessageBox.Show("Invalid username or password.");
             }
+
+            //this.Show();
         }
     }
 }

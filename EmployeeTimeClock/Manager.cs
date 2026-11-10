@@ -12,9 +12,17 @@ namespace EmployeeTimeClock
 {
     public partial class Manager : Form
     {
-        public Manager()
+        Form parent;
+
+        public Manager(Form parentForm)
         {
+            // Initialization
+            parent = parentForm;
             InitializeComponent();
+
+            // Default Hidden Panels
+            logoutPanel.Hide();
+
             scheduleGroupBox.BringToFront();
         }
 
@@ -71,6 +79,19 @@ namespace EmployeeTimeClock
         private void viewTimesheetButton_Click(object sender, EventArgs e)
         {
             viewTimesheetGroupBox.BringToFront();
+        }
+
+        // Logout Functions
+        // - - - - -    Samuel Griggs
+        private void logoutButton_Click(object sender, EventArgs e) {
+            logoutPanel.Show();
+        }
+        private void ConfirmLogoutButton_Click(object sender, EventArgs e) {
+            parent.Show();
+            this.Close();
+        }
+        private void CancelLogoutButton_Click(object sender, EventArgs e) {
+            logoutPanel.Hide();
         }
     }
 }
