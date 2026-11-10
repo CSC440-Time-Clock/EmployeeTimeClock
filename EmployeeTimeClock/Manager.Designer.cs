@@ -357,6 +357,7 @@
             this.clockOutButton.TabIndex = 4;
             this.clockOutButton.Text = "Clock Out";
             this.clockOutButton.UseVisualStyleBackColor = true;
+            this.clockOutButton.Click += new System.EventHandler(this.clockOutButton_Click);
             // 
             // tableLayoutPanel3
             // 

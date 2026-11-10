@@ -32,6 +32,9 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.scheduleGroupBox = new System.Windows.Forms.GroupBox();
             this.LogoutPanel = new System.Windows.Forms.Panel();
+            this.CancelLogoutButton = new System.Windows.Forms.Button();
+            this.ConfirmLogoutButton = new System.Windows.Forms.Button();
+            this.label23 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.Saturday = new System.Windows.Forms.Label();
             this.Friday = new System.Windows.Forms.Label();
@@ -104,9 +107,6 @@
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.logoutButton = new System.Windows.Forms.Button();
             this.statusLabel = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.ConfirmLogoutButton = new System.Windows.Forms.Button();
-            this.CancelLogoutButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -190,6 +190,35 @@
             this.LogoutPanel.Name = "LogoutPanel";
             this.LogoutPanel.Size = new System.Drawing.Size(585, 461);
             this.LogoutPanel.TabIndex = 1;
+            // 
+            // CancelLogoutButton
+            // 
+            this.CancelLogoutButton.Location = new System.Drawing.Point(368, 312);
+            this.CancelLogoutButton.Name = "CancelLogoutButton";
+            this.CancelLogoutButton.Size = new System.Drawing.Size(142, 70);
+            this.CancelLogoutButton.TabIndex = 2;
+            this.CancelLogoutButton.Text = "No";
+            this.CancelLogoutButton.UseVisualStyleBackColor = true;
+            this.CancelLogoutButton.Click += new System.EventHandler(this.CancelLogoutButton_Click);
+            // 
+            // ConfirmLogoutButton
+            // 
+            this.ConfirmLogoutButton.Location = new System.Drawing.Point(106, 310);
+            this.ConfirmLogoutButton.Name = "ConfirmLogoutButton";
+            this.ConfirmLogoutButton.Size = new System.Drawing.Size(128, 72);
+            this.ConfirmLogoutButton.TabIndex = 1;
+            this.ConfirmLogoutButton.Text = "Yes";
+            this.ConfirmLogoutButton.UseVisualStyleBackColor = true;
+            this.ConfirmLogoutButton.Click += new System.EventHandler(this.ConfirmLogoutButton_Click);
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(133, 51);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(305, 48);
+            this.label23.TabIndex = 0;
+            this.label23.Text = "Confirm Logout";
             // 
             // tableLayoutPanel2
             // 
@@ -1032,6 +1061,7 @@
             this.clockInButton.TabIndex = 7;
             this.clockInButton.Text = "Clock In";
             this.clockInButton.UseVisualStyleBackColor = true;
+            this.clockInButton.Click += new System.EventHandler(this.clockInButton_Click);
             // 
             // breakStartButton
             // 
@@ -1071,6 +1101,7 @@
             this.clockOutButton.TabIndex = 4;
             this.clockOutButton.Text = "Clock Out";
             this.clockOutButton.UseVisualStyleBackColor = true;
+            this.clockOutButton.Click += new System.EventHandler(this.clockOutButton_Click);
             // 
             // tableLayoutPanel4
             // 
@@ -1142,35 +1173,6 @@
             this.statusLabel.TabIndex = 12;
             this.statusLabel.Text = "Status: Clocked out";
             this.statusLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(133, 51);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(305, 48);
-            this.label23.TabIndex = 0;
-            this.label23.Text = "Confirm Logout";
-            // 
-            // ConfirmLogoutButton
-            // 
-            this.ConfirmLogoutButton.Location = new System.Drawing.Point(106, 310);
-            this.ConfirmLogoutButton.Name = "ConfirmLogoutButton";
-            this.ConfirmLogoutButton.Size = new System.Drawing.Size(128, 72);
-            this.ConfirmLogoutButton.TabIndex = 1;
-            this.ConfirmLogoutButton.Text = "Yes";
-            this.ConfirmLogoutButton.UseVisualStyleBackColor = true;
-            this.ConfirmLogoutButton.Click += new System.EventHandler(this.ConfirmLogoutButton_Click);
-            // 
-            // CancelLogoutButton
-            // 
-            this.CancelLogoutButton.Location = new System.Drawing.Point(368, 312);
-            this.CancelLogoutButton.Name = "CancelLogoutButton";
-            this.CancelLogoutButton.Size = new System.Drawing.Size(142, 70);
-            this.CancelLogoutButton.TabIndex = 2;
-            this.CancelLogoutButton.Text = "No";
-            this.CancelLogoutButton.UseVisualStyleBackColor = true;
-            this.CancelLogoutButton.Click += new System.EventHandler(this.CancelLogoutButton_Click);
             // 
             // Employee
             // 

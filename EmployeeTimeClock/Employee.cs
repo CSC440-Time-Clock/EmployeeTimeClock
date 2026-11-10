@@ -13,6 +13,7 @@ namespace EmployeeTimeClock
     public partial class Employee : Form
     {
         Form parent;
+        bool isClocked;
 
         public Employee(Form parentForm)
         {
@@ -34,7 +35,7 @@ namespace EmployeeTimeClock
 
 
         // Log Out Functions
-        // - - - -  Samuel Griggs
+        // - - - - -    Samuel Griggs
         private void logoutButton_Click(object sender, EventArgs e)
         {
             LogoutPanel.Show();
@@ -47,6 +48,28 @@ namespace EmployeeTimeClock
             LogoutPanel.Hide();
         }
 
+        // Clock In Functionality
+        // - - - - -    Samuel Griggs
+        private void clockInButton_Click(object sender, EventArgs e) {
+            updateStatus(true);
+
+            /*                                              *
+             *      Add Database Functionality Here         *
+             *                                              */
+
+            statusLabel.Text = "Status: Clocked In";
+        }
+        // Clock Out Functionality
+        // - - - - -    Samuel Griggs
+        private void clockOutButton_Click(object sender, EventArgs e) {
+            updateStatus(false);
+
+            /*                                              *
+             *      Add Database Functionality Here         *
+             *                                              */
+
+            statusLabel.Text = "Status: Clocked Out";
+        }
 
         private void viewTimesheetButton_Click(object sender, EventArgs e)
         {
@@ -76,6 +99,14 @@ namespace EmployeeTimeClock
         private void viewSchedule_Click(object sender, EventArgs e)
         {
             scheduleGroupBox.BringToFront();
+        }
+
+
+        // Miscellaneous Functions
+
+        private void updateStatus(bool status) {
+
+            isClocked = status;
         }
 
         
