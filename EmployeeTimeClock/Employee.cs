@@ -14,12 +14,20 @@ namespace EmployeeTimeClock
     {
         Form parent;
         bool isClocked;
+        bool isOnBreak;
 
         public Employee(Form parentForm)
         {
+            // Initializations
             parent = parentForm;
             InitializeComponent();
+
+            isClocked = false;
+            isOnBreak = false;
+
+            // Default Hidden Objects
             LogoutPanel.Hide();
+
             scheduleGroupBox.BringToFront();
         }
 
@@ -39,6 +47,7 @@ namespace EmployeeTimeClock
         private void logoutButton_Click(object sender, EventArgs e)
         {
             LogoutPanel.Show();
+            LogoutPanel.BringToFront();
         }
         private void ConfirmLogoutButton_Click(object sender, EventArgs e) {
             parent.Show();
@@ -51,24 +60,56 @@ namespace EmployeeTimeClock
         // Clock In Functionality
         // - - - - -    Samuel Griggs
         private void clockInButton_Click(object sender, EventArgs e) {
-            updateStatus(true);
+            if(!isClocked)   {
+                updateStatus(true);
 
-            /*                                              *
-             *      Add Database Functionality Here         *
-             *                                              */
+                /*                                              *
+                 *      Add Database Functionality Here         *
+                 *                                              */
 
-            statusLabel.Text = "Status: Clocked In";
+                statusLabel.Text = "Status: Clocked In";
+            }
         }
         // Clock Out Functionality
         // - - - - -    Samuel Griggs
         private void clockOutButton_Click(object sender, EventArgs e) {
-            updateStatus(false);
+            if(isClocked) {
+                updateStatus(false);
+                updateBreak(false);
 
-            /*                                              *
-             *      Add Database Functionality Here         *
-             *                                              */
+                /*                                              *
+                 *      Add Database Functionality Here         *
+                 *                                              */
 
-            statusLabel.Text = "Status: Clocked Out";
+                statusLabel.Text = "Status: Clocked Out";
+            }
+        }
+
+        // Start Break Functionality
+        // - - - - -    Samuel Griggs
+        private void breakStartButton_Click(object sender, EventArgs e) {
+            if (!isOnBreak && isClocked) {                
+                updateBreak(true);
+
+                /*                                          *
+                 *      Add Database Functionality Here     *
+                 *                                          */
+
+                statusLabel.Text = "Status: On Break";
+            }
+        }
+        // End Break Functionality
+        // - - - - -    Samuel Griggs
+        private void breakEndButton_Click(object sender, EventArgs e) {
+            if(isOnBreak && isClocked) {
+                updateBreak(false);
+
+                /*                                          *
+                 *      Add Database Functionality Here     *
+                 *                                          */
+
+                statusLabel.Text = "Status: Clocked In";
+            }
         }
 
         private void viewTimesheetButton_Click(object sender, EventArgs e)
@@ -104,10 +145,21 @@ namespace EmployeeTimeClock
 
         // Miscellaneous Functions
 
+        // updateStatus
+        //      Modifies the value of isClocked
+        // - - - - -    Samuel Griggs
         private void updateStatus(bool status) {
 
             isClocked = status;
         }
+
+        // updateBreak
+        //      Modifies the value of isOnBreak
+        // - - - - -    Samuel Griggs
+        private void updateBreak(bool status) {
+            isOnBreak = status;
+        }
+
 
         
     }

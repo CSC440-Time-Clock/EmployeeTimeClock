@@ -169,8 +169,8 @@
             // 
             // scheduleGroupBox
             // 
-            this.scheduleGroupBox.Controls.Add(this.LogoutPanel);
             this.scheduleGroupBox.Controls.Add(this.tableLayoutPanel2);
+            this.scheduleGroupBox.Controls.Add(this.LogoutPanel);
             this.scheduleGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.scheduleGroupBox.Location = new System.Drawing.Point(0, 0);
             this.scheduleGroupBox.Margin = new System.Windows.Forms.Padding(4);
@@ -1075,6 +1075,7 @@
             this.breakStartButton.TabIndex = 6;
             this.breakStartButton.Text = "Break Start";
             this.breakStartButton.UseVisualStyleBackColor = true;
+            this.breakStartButton.Click += new System.EventHandler(this.breakStartButton_Click);
             // 
             // breakEndButton
             // 
@@ -1088,6 +1089,7 @@
             this.breakEndButton.TabIndex = 5;
             this.breakEndButton.Text = "Break End";
             this.breakEndButton.UseVisualStyleBackColor = true;
+            this.breakEndButton.Click += new System.EventHandler(this.breakEndButton_Click);
             // 
             // clockOutButton
             // 

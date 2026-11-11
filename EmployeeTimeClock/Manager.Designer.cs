@@ -331,6 +331,7 @@
             this.breakStartButton.TabIndex = 6;
             this.breakStartButton.Text = "Break Start";
             this.breakStartButton.UseVisualStyleBackColor = true;
+            this.breakStartButton.Click += new System.EventHandler(this.breakStartButton_Click);
             // 
             // breakEndButton
             // 
@@ -344,6 +345,7 @@
             this.breakEndButton.TabIndex = 5;
             this.breakEndButton.Text = "Break End";
             this.breakEndButton.UseVisualStyleBackColor = true;
+            this.breakEndButton.Click += new System.EventHandler(this.breakEndButton_Click);
             // 
             // clockOutButton
             // 
@@ -2212,8 +2214,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
             this.ClientSize = new System.Drawing.Size(1924, 710);
-            this.Controls.Add(this.logoutPanel);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.Controls.Add(this.logoutPanel);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Manager";
             this.Text = "Manager";
