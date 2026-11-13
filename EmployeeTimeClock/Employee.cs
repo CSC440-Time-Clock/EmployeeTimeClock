@@ -23,6 +23,7 @@ namespace EmployeeTimeClock
         bool isOnBreak;
         DateTime startBreakTime;
         DateTime endBreakTime;
+        DateTime[,] schedule = new DateTime[7,5];   // 5 7-day weeks
 
         public Employee(Form parentForm, int ID)
         {
@@ -35,10 +36,15 @@ namespace EmployeeTimeClock
             isOnBreak = false;
 
 
-            //  Grab Information from the Database
-            //      Grab clockIn/Out Time if available
-            //      Grab start/end BreakTime if available
-            //      Determine if currently Clocked or OnBreak
+            /*  Grab Information from the Database                      *
+            *       Grab clockIn/Out Time if available                  *
+            *       Grab start/end BreakTime if available               *
+            *       Determine if currently Clocked or OnBreak           *
+            *                                                           *
+            *       Grab current month's schedule into schedule[,]      *
+            *       [Day, Week] leave as DateTime.MinValue() if no      *
+            *       scheduled time.                                     *
+            *                                                           */
 
 
             // Default Hidden Objects
@@ -62,7 +68,17 @@ namespace EmployeeTimeClock
                 startBreakTimeLabel.Text = startBreakTime.ToString("t");
             if(!endBreakTime.Equals(DateTime.MinValue))
                 endBreakTimeLabel.Text = endBreakTime.ToString("t");
-            
+
+            //      View Schedule
+            for(int d = 0; d < 7; d++) {
+                for(int w = 0; w < 5; w++) {
+                    // If this day of the week isn't assigned (ie. last/previous month or not yet scheduled), skip
+                    if (schedule[d, w].Equals(DateTime.MinValue))
+                        continue;
+
+                    scheduleTable.GetControlFromPosition(d, w+1).Text = schedule[d, w].ToString("t");
+                }
+            }
 
 
                 scheduleGroupBox.BringToFront();
@@ -302,8 +318,6 @@ namespace EmployeeTimeClock
         {
             timesheetGroupBox.BringToFront();
         }
-
-        
 
         private void viewSchedule_Click(object sender, EventArgs e)
         {
