@@ -194,8 +194,108 @@ namespace EmployeeTimeClock
             }
         }
 
+        // Adjust Availability Functions
+        //      For Employees to submit the time each day of the week they are
+        //      available to work
+        // - - - - -    Samuel Griggs
         private void adjustAvailabilityButton_Click(object sender, EventArgs e) {
             availabilityGroupBox.BringToFront();
+        }
+        private void availabilitySubmitButton_Click(object sender, EventArgs e) {
+            // Start and End Time Variables
+            string sundayStart, sundayEnd;
+            string mondayStart, mondayEnd;
+            string tuesdayStart, tuesdayEnd;
+            string wednesdayStart, wednesdayEnd;
+            string thursdayStart, thursdayEnd;
+            string fridayStart, fridayEnd;
+            string saturdayStart, saturdayEnd;
+
+            // TextInputs - Values must be in 2400 format or just ""
+            //      0 < Input < 2400  And  Start < End  or  .Equals("")
+            try {
+                // Sunday
+                if (String.IsNullOrEmpty(sundayStartInput.Text) || (int.Parse(sundayStartInput.Text) >= 0 && int.Parse(sundayStartInput.Text) <= 2400)) {
+                    sundayStart = sundayStartInput.Text;
+                }
+                else throw new FormatException();
+                if (String.IsNullOrEmpty(sundayEndInput.Text) || (int.Parse(sundayEndInput.Text) >= 0 && int.Parse(sundayEndInput.Text) <= 2400 && int.Parse(sundayEndInput.Text) > int.Parse(sundayStartInput.Text))) {
+                    sundayStart = sundayEndInput.Text;
+                }
+                else throw new FormatException();
+                // Monday
+                if (String.IsNullOrEmpty(mondayStartInput.Text) || (int.Parse(mondayStartInput.Text) >= 0 && int.Parse(mondayStartInput.Text) <= 2400)) {
+                    mondayStart = mondayStartInput.Text;
+                }
+                else throw new FormatException();
+                if (String.IsNullOrEmpty(mondayEndInput.Text) || (int.Parse(mondayEndInput.Text) >= 0 && int.Parse(mondayEndInput.Text) <= 2400 && int.Parse(mondayEndInput.Text) > int.Parse(mondayStartInput.Text))) {
+                    mondayEnd = mondayEndInput.Text;
+                }
+                else throw new FormatException();
+                // Tuesday
+                if (String.IsNullOrEmpty(tuesdayStartInput.Text) || (int.Parse(tuesdayStartInput.Text) >= 0 && int.Parse(tuesdayStartInput.Text) <= 2400)) {
+                    tuesdayStart = tuesdayStartInput.Text;
+                }
+                else throw new FormatException();
+                if (String.IsNullOrEmpty(tuesdayEndInput.Text) || (int.Parse(tuesdayEndInput.Text) >= 0 && int.Parse(tuesdayEndInput.Text) <= 2400 && int.Parse(tuesdayEndInput.Text) > int.Parse(tuesdayStartInput.Text))) {
+                    tuesdayEnd = tuesdayEndInput.Text;
+                }
+                else throw new FormatException();
+                // Wednesday
+                if (String.IsNullOrEmpty(wednesdayStartInput.Text) || (int.Parse(wednesdayStartInput.Text) >= 0 && int.Parse(wednesdayStartInput.Text) <= 2400)) {
+                    wednesdayStart = wednesdayStartInput.Text;
+                }
+                else throw new FormatException();
+                if (String.IsNullOrEmpty(wednesdayEndInput.Text) || (int.Parse(wednesdayEndInput.Text) >= 0 && int.Parse(wednesdayEndInput.Text) <= 2400 && int.Parse(wednesdayEndInput.Text) > int.Parse(wednesdayStartInput.Text))) {
+                    wednesdayEnd = wednesdayEndInput.Text;
+                }
+                else throw new FormatException();
+                // Thursday
+                if (String.IsNullOrEmpty(thursdayStartInput.Text) || (int.Parse(thursdayStartInput.Text) >= 0 && int.Parse(thursdayStartInput.Text) <= 2400)) {
+                    thursdayStart = thursdayStartInput.Text;
+                }
+                else throw new FormatException();
+                if (String.IsNullOrEmpty(thursdayEndInput.Text) || (int.Parse(thursdayEndInput.Text) >= 0 && int.Parse(thursdayEndInput.Text) <= 2400 && int.Parse(thursdayEndInput.Text) > int.Parse(thursdayStartInput.Text))) {
+                    thursdayEnd = thursdayEndInput.Text;
+                }
+                else throw new FormatException();
+                // Friday
+                if (String.IsNullOrEmpty(fridayStartInput.Text) || (int.Parse(fridayStartInput.Text) >= 0 && int.Parse(fridayStartInput.Text) <= 2400)) {
+                    fridayStart = fridayStartInput.Text;
+                }
+                else throw new FormatException();
+                if (String.IsNullOrEmpty(fridayEndInput.Text) || (int.Parse(fridayEndInput.Text) >= 0 && int.Parse(fridayEndInput.Text) <= 2400 && int.Parse(fridayEndInput.Text) > int.Parse(fridayStartInput.Text))) {
+                    fridayEnd = fridayEndInput.Text;
+                }
+                else throw new FormatException();
+                // Saturday
+                if (String.IsNullOrEmpty(saturdayStartInput.Text) || (int.Parse(saturdayStartInput.Text) >= 0 && int.Parse(saturdayStartInput.Text) <= 2400)) {
+                    saturdayStart = saturdayStartInput.Text;
+                }
+                else throw new FormatException();
+                if (String.IsNullOrEmpty(saturdayEndInput.Text) || (int.Parse(saturdayEndInput.Text) >= 0 && int.Parse(saturdayEndInput.Text) <= 2400 && int.Parse(saturdayEndInput.Text) > int.Parse(saturdayStartInput.Text))) {
+                saturdayEnd = saturdayEndInput.Text;
+            }
+                else throw new FormatException();
+
+
+                //  Input times are valid.
+
+                /*                                              *
+                 *      Add Database Functionality Here         *
+                 *                                              *
+                 *      Input the start times for each day      *
+                 *      into the database.                      *
+                 *                                              */
+
+            }
+            catch (FormatException) {
+                MessageBox.Show("One of your times are invalid. Please enter in 2400 Hour format or leave blank.");
+            }
+            catch {
+
+            }
+            
         }
 
         private void viewTimesheetButton_Click(object sender, EventArgs e)

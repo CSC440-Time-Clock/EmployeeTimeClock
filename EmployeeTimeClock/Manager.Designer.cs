@@ -48,6 +48,15 @@
             this.viewTimesheetButton = new System.Windows.Forms.Button();
             this.editTimesheetButton = new System.Windows.Forms.Button();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.scheduleGroupBox = new System.Windows.Forms.GroupBox();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.Saturday = new System.Windows.Forms.Label();
+            this.Friday = new System.Windows.Forms.Label();
+            this.Thursday = new System.Windows.Forms.Label();
+            this.Wednesday = new System.Windows.Forms.Label();
+            this.Tuesday = new System.Windows.Forms.Label();
+            this.Monday = new System.Windows.Forms.Label();
+            this.Sunday = new System.Windows.Forms.Label();
             this.editTimesheetGroupBox = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel12 = new System.Windows.Forms.TableLayoutPanel();
@@ -168,15 +177,6 @@
             this.label46 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label47 = new System.Windows.Forms.Label();
-            this.scheduleGroupBox = new System.Windows.Forms.GroupBox();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.Saturday = new System.Windows.Forms.Label();
-            this.Friday = new System.Windows.Forms.Label();
-            this.Thursday = new System.Windows.Forms.Label();
-            this.Wednesday = new System.Windows.Forms.Label();
-            this.Tuesday = new System.Windows.Forms.Label();
-            this.Monday = new System.Windows.Forms.Label();
-            this.Sunday = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.logoutPanel = new System.Windows.Forms.Panel();
             this.CancelLogoutButton = new System.Windows.Forms.Button();
@@ -189,6 +189,8 @@
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            this.scheduleGroupBox.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
             this.editTimesheetGroupBox.SuspendLayout();
             this.tableLayoutPanel10.SuspendLayout();
             this.tableLayoutPanel12.SuspendLayout();
@@ -214,8 +216,6 @@
             this.tableLayoutPanel16.SuspendLayout();
             this.tableLayoutPanel17.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.scheduleGroupBox.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.logoutPanel.SuspendLayout();
             this.SuspendLayout();
@@ -519,6 +519,141 @@
             this.splitContainer1.SplitterDistance = 1454;
             this.splitContainer1.SplitterWidth = 5;
             this.splitContainer1.TabIndex = 1;
+            // 
+            // scheduleGroupBox
+            // 
+            this.scheduleGroupBox.Controls.Add(this.tableLayoutPanel2);
+            this.scheduleGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.scheduleGroupBox.Location = new System.Drawing.Point(0, 0);
+            this.scheduleGroupBox.Margin = new System.Windows.Forms.Padding(4);
+            this.scheduleGroupBox.Name = "scheduleGroupBox";
+            this.scheduleGroupBox.Padding = new System.Windows.Forms.Padding(4);
+            this.scheduleGroupBox.Size = new System.Drawing.Size(1454, 579);
+            this.scheduleGroupBox.TabIndex = 12;
+            this.scheduleGroupBox.TabStop = false;
+            this.scheduleGroupBox.Text = "Schedule";
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 7;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
+            this.tableLayoutPanel2.Controls.Add(this.Saturday, 6, 0);
+            this.tableLayoutPanel2.Controls.Add(this.Friday, 5, 0);
+            this.tableLayoutPanel2.Controls.Add(this.Thursday, 4, 0);
+            this.tableLayoutPanel2.Controls.Add(this.Wednesday, 3, 0);
+            this.tableLayoutPanel2.Controls.Add(this.Tuesday, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.Monday, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.Sunday, 0, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(4, 52);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 6;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 62F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1446, 523);
+            this.tableLayoutPanel2.TabIndex = 3;
+            // 
+            // Saturday
+            // 
+            this.Saturday.AutoSize = true;
+            this.Saturday.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Saturday.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.Saturday.Location = new System.Drawing.Point(1240, 0);
+            this.Saturday.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Saturday.Name = "Saturday";
+            this.Saturday.Size = new System.Drawing.Size(202, 62);
+            this.Saturday.TabIndex = 6;
+            this.Saturday.Text = "Saturday";
+            this.Saturday.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Friday
+            // 
+            this.Friday.AutoSize = true;
+            this.Friday.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Friday.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.Friday.Location = new System.Drawing.Point(1034, 0);
+            this.Friday.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Friday.Name = "Friday";
+            this.Friday.Size = new System.Drawing.Size(198, 62);
+            this.Friday.TabIndex = 5;
+            this.Friday.Text = "Friday";
+            this.Friday.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Thursday
+            // 
+            this.Thursday.AutoSize = true;
+            this.Thursday.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Thursday.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.Thursday.Location = new System.Drawing.Point(828, 0);
+            this.Thursday.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Thursday.Name = "Thursday";
+            this.Thursday.Size = new System.Drawing.Size(198, 62);
+            this.Thursday.TabIndex = 4;
+            this.Thursday.Text = "Thursday";
+            this.Thursday.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Wednesday
+            // 
+            this.Wednesday.AutoSize = true;
+            this.Wednesday.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Wednesday.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.Wednesday.Location = new System.Drawing.Point(622, 0);
+            this.Wednesday.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Wednesday.Name = "Wednesday";
+            this.Wednesday.Size = new System.Drawing.Size(198, 62);
+            this.Wednesday.TabIndex = 3;
+            this.Wednesday.Text = "Wednesday";
+            this.Wednesday.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Tuesday
+            // 
+            this.Tuesday.AutoSize = true;
+            this.Tuesday.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Tuesday.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.Tuesday.Location = new System.Drawing.Point(416, 0);
+            this.Tuesday.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Tuesday.Name = "Tuesday";
+            this.Tuesday.Size = new System.Drawing.Size(198, 62);
+            this.Tuesday.TabIndex = 2;
+            this.Tuesday.Text = "Tuesday";
+            this.Tuesday.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Monday
+            // 
+            this.Monday.AutoSize = true;
+            this.Monday.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Monday.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.Monday.Location = new System.Drawing.Point(210, 0);
+            this.Monday.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Monday.Name = "Monday";
+            this.Monday.Size = new System.Drawing.Size(198, 62);
+            this.Monday.TabIndex = 1;
+            this.Monday.Text = "Monday";
+            this.Monday.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Sunday
+            // 
+            this.Sunday.AutoSize = true;
+            this.Sunday.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Sunday.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.Sunday.Location = new System.Drawing.Point(4, 0);
+            this.Sunday.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Sunday.Name = "Sunday";
+            this.Sunday.Size = new System.Drawing.Size(198, 62);
+            this.Sunday.TabIndex = 0;
+            this.Sunday.Text = "Sunday";
+            this.Sunday.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // editTimesheetGroupBox
             // 
@@ -2012,141 +2147,6 @@
             this.label47.TabIndex = 0;
             this.label47.Text = "GENERATE EMPLOYEE REQUEST HERE IN A TABLE";
             // 
-            // scheduleGroupBox
-            // 
-            this.scheduleGroupBox.Controls.Add(this.tableLayoutPanel2);
-            this.scheduleGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.scheduleGroupBox.Location = new System.Drawing.Point(0, 0);
-            this.scheduleGroupBox.Margin = new System.Windows.Forms.Padding(4);
-            this.scheduleGroupBox.Name = "scheduleGroupBox";
-            this.scheduleGroupBox.Padding = new System.Windows.Forms.Padding(4);
-            this.scheduleGroupBox.Size = new System.Drawing.Size(1454, 579);
-            this.scheduleGroupBox.TabIndex = 12;
-            this.scheduleGroupBox.TabStop = false;
-            this.scheduleGroupBox.Text = "Schedule";
-            // 
-            // tableLayoutPanel2
-            // 
-            this.tableLayoutPanel2.ColumnCount = 7;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
-            this.tableLayoutPanel2.Controls.Add(this.Saturday, 6, 0);
-            this.tableLayoutPanel2.Controls.Add(this.Friday, 5, 0);
-            this.tableLayoutPanel2.Controls.Add(this.Thursday, 4, 0);
-            this.tableLayoutPanel2.Controls.Add(this.Wednesday, 3, 0);
-            this.tableLayoutPanel2.Controls.Add(this.Tuesday, 2, 0);
-            this.tableLayoutPanel2.Controls.Add(this.Monday, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.Sunday, 0, 0);
-            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(4, 52);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 6;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 62F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1446, 523);
-            this.tableLayoutPanel2.TabIndex = 3;
-            // 
-            // Saturday
-            // 
-            this.Saturday.AutoSize = true;
-            this.Saturday.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Saturday.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.Saturday.Location = new System.Drawing.Point(1240, 0);
-            this.Saturday.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Saturday.Name = "Saturday";
-            this.Saturday.Size = new System.Drawing.Size(202, 62);
-            this.Saturday.TabIndex = 6;
-            this.Saturday.Text = "Saturday";
-            this.Saturday.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // Friday
-            // 
-            this.Friday.AutoSize = true;
-            this.Friday.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Friday.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.Friday.Location = new System.Drawing.Point(1034, 0);
-            this.Friday.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Friday.Name = "Friday";
-            this.Friday.Size = new System.Drawing.Size(198, 62);
-            this.Friday.TabIndex = 5;
-            this.Friday.Text = "Friday";
-            this.Friday.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // Thursday
-            // 
-            this.Thursday.AutoSize = true;
-            this.Thursday.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Thursday.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.Thursday.Location = new System.Drawing.Point(828, 0);
-            this.Thursday.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Thursday.Name = "Thursday";
-            this.Thursday.Size = new System.Drawing.Size(198, 62);
-            this.Thursday.TabIndex = 4;
-            this.Thursday.Text = "Thursday";
-            this.Thursday.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // Wednesday
-            // 
-            this.Wednesday.AutoSize = true;
-            this.Wednesday.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Wednesday.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.Wednesday.Location = new System.Drawing.Point(622, 0);
-            this.Wednesday.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Wednesday.Name = "Wednesday";
-            this.Wednesday.Size = new System.Drawing.Size(198, 62);
-            this.Wednesday.TabIndex = 3;
-            this.Wednesday.Text = "Wednesday";
-            this.Wednesday.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // Tuesday
-            // 
-            this.Tuesday.AutoSize = true;
-            this.Tuesday.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Tuesday.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.Tuesday.Location = new System.Drawing.Point(416, 0);
-            this.Tuesday.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Tuesday.Name = "Tuesday";
-            this.Tuesday.Size = new System.Drawing.Size(198, 62);
-            this.Tuesday.TabIndex = 2;
-            this.Tuesday.Text = "Tuesday";
-            this.Tuesday.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // Monday
-            // 
-            this.Monday.AutoSize = true;
-            this.Monday.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Monday.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.Monday.Location = new System.Drawing.Point(210, 0);
-            this.Monday.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Monday.Name = "Monday";
-            this.Monday.Size = new System.Drawing.Size(198, 62);
-            this.Monday.TabIndex = 1;
-            this.Monday.Text = "Monday";
-            this.Monday.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // Sunday
-            // 
-            this.Sunday.AutoSize = true;
-            this.Sunday.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Sunday.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.Sunday.Location = new System.Drawing.Point(4, 0);
-            this.Sunday.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Sunday.Name = "Sunday";
-            this.Sunday.Size = new System.Drawing.Size(198, 62);
-            this.Sunday.TabIndex = 0;
-            this.Sunday.Text = "Sunday";
-            this.Sunday.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 1;
@@ -2227,6 +2227,9 @@
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            this.scheduleGroupBox.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
             this.editTimesheetGroupBox.ResumeLayout(false);
             this.tableLayoutPanel10.ResumeLayout(false);
             this.tableLayoutPanel12.ResumeLayout(false);
@@ -2264,9 +2267,6 @@
             this.tableLayoutPanel17.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.scheduleGroupBox.ResumeLayout(false);
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel2.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.logoutPanel.ResumeLayout(false);
             this.logoutPanel.PerformLayout();

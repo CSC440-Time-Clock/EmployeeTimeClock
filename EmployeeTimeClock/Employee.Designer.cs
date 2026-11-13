@@ -30,6 +30,16 @@
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.PTOgroupBox = new System.Windows.Forms.GroupBox();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.PTOReasonInput = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.PTOHoursInput = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
+            this.PTOsubmitButton = new System.Windows.Forms.Button();
+            this.PTODayInput = new System.Windows.Forms.ComboBox();
             this.timesheetGroupBox = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.hrsWorkedLabel = new System.Windows.Forms.Label();
@@ -58,40 +68,31 @@
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
             this.availabilitySubmitButton = new System.Windows.Forms.Button();
-            this.textBox17 = new System.Windows.Forms.TextBox();
-            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.saturdayEndInput = new System.Windows.Forms.TextBox();
+            this.saturdayStartInput = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.fridayEndInput = new System.Windows.Forms.TextBox();
+            this.fridayStartInput = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.thursdayEndInput = new System.Windows.Forms.TextBox();
+            this.thursdayStartInput = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.wednesdayEndInput = new System.Windows.Forms.TextBox();
+            this.wednesdayStartInput = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.tuesdayEndInput = new System.Windows.Forms.TextBox();
+            this.tuesdayStartInput = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.mondayEndInput = new System.Windows.Forms.TextBox();
+            this.mondayStartInput = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.sundayEndInput = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.sundayStartInput = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.PTOgroupBox = new System.Windows.Forms.GroupBox();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.PTOReasonInput = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.PTOHoursInput = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
-            this.PTOsubmitButton = new System.Windows.Forms.Button();
             this.employeePanel = new System.Windows.Forms.TableLayoutPanel();
             this.viewSchedule = new System.Windows.Forms.Button();
             this.adjustAvailabilityButton = new System.Windows.Forms.Button();
@@ -106,12 +107,14 @@
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.logoutButton = new System.Windows.Forms.Button();
             this.statusLabel = new System.Windows.Forms.Label();
-            this.PTODayInput = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            this.PTOgroupBox.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
+            this.tableLayoutPanel8.SuspendLayout();
             this.timesheetGroupBox.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
             this.scheduleGroupBox.SuspendLayout();
@@ -120,9 +123,6 @@
             this.availabilityGroupBox.SuspendLayout();
             this.tableLayoutPanel9.SuspendLayout();
             this.tableLayoutPanel10.SuspendLayout();
-            this.PTOgroupBox.SuspendLayout();
-            this.tableLayoutPanel3.SuspendLayout();
-            this.tableLayoutPanel8.SuspendLayout();
             this.employeePanel.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
@@ -154,10 +154,10 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.availabilityGroupBox);
             this.splitContainer1.Panel1.Controls.Add(this.PTOgroupBox);
             this.splitContainer1.Panel1.Controls.Add(this.timesheetGroupBox);
             this.splitContainer1.Panel1.Controls.Add(this.scheduleGroupBox);
-            this.splitContainer1.Panel1.Controls.Add(this.availabilityGroupBox);
             // 
             // splitContainer1.Panel2
             // 
@@ -166,6 +166,145 @@
             this.splitContainer1.SplitterDistance = 1511;
             this.splitContainer1.SplitterWidth = 5;
             this.splitContainer1.TabIndex = 1;
+            // 
+            // PTOgroupBox
+            // 
+            this.PTOgroupBox.Controls.Add(this.tableLayoutPanel3);
+            this.PTOgroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PTOgroupBox.Location = new System.Drawing.Point(0, 0);
+            this.PTOgroupBox.Margin = new System.Windows.Forms.Padding(4);
+            this.PTOgroupBox.Name = "PTOgroupBox";
+            this.PTOgroupBox.Padding = new System.Windows.Forms.Padding(4);
+            this.PTOgroupBox.Size = new System.Drawing.Size(1511, 587);
+            this.PTOgroupBox.TabIndex = 12;
+            this.PTOgroupBox.TabStop = false;
+            this.PTOgroupBox.Text = "PTO Request";
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 1;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.Controls.Add(this.PTOReasonInput, 0, 5);
+            this.tableLayoutPanel3.Controls.Add(this.label11, 0, 4);
+            this.tableLayoutPanel3.Controls.Add(this.PTOHoursInput, 0, 3);
+            this.tableLayoutPanel3.Controls.Add(this.label10, 0, 2);
+            this.tableLayoutPanel3.Controls.Add(this.label1, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel8, 0, 6);
+            this.tableLayoutPanel3.Controls.Add(this.PTODayInput, 0, 1);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(4, 52);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 7;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1503, 531);
+            this.tableLayoutPanel3.TabIndex = 0;
+            // 
+            // PTOReasonInput
+            // 
+            this.PTOReasonInput.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PTOReasonInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.PTOReasonInput.Location = new System.Drawing.Point(4, 379);
+            this.PTOReasonInput.Margin = new System.Windows.Forms.Padding(4);
+            this.PTOReasonInput.Name = "PTOReasonInput";
+            this.PTOReasonInput.Size = new System.Drawing.Size(1495, 36);
+            this.PTOReasonInput.TabIndex = 5;
+            // 
+            // label11
+            // 
+            this.label11.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.label11.Location = new System.Drawing.Point(4, 300);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(1495, 75);
+            this.label11.TabIndex = 4;
+            this.label11.Text = "Why are you requesting off?";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // PTOHoursInput
+            // 
+            this.PTOHoursInput.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PTOHoursInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.PTOHoursInput.Location = new System.Drawing.Point(4, 229);
+            this.PTOHoursInput.Margin = new System.Windows.Forms.Padding(4);
+            this.PTOHoursInput.Name = "PTOHoursInput";
+            this.PTOHoursInput.Size = new System.Drawing.Size(1495, 36);
+            this.PTOHoursInput.TabIndex = 3;
+            // 
+            // label10
+            // 
+            this.label10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.label10.Location = new System.Drawing.Point(4, 150);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(1495, 75);
+            this.label10.TabIndex = 2;
+            this.label10.Text = "How many hours are you requesting off?";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label1
+            // 
+            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.label1.Location = new System.Drawing.Point(4, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(1495, 75);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "What day are you requesting off?";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // tableLayoutPanel8
+            // 
+            this.tableLayoutPanel8.ColumnCount = 1;
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel8.Controls.Add(this.PTOsubmitButton, 0, 0);
+            this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel8.Location = new System.Drawing.Point(4, 454);
+            this.tableLayoutPanel8.Margin = new System.Windows.Forms.Padding(4);
+            this.tableLayoutPanel8.Name = "tableLayoutPanel8";
+            this.tableLayoutPanel8.RowCount = 1;
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(1495, 73);
+            this.tableLayoutPanel8.TabIndex = 6;
+            // 
+            // PTOsubmitButton
+            // 
+            this.PTOsubmitButton.AutoSize = true;
+            this.PTOsubmitButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PTOsubmitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.PTOsubmitButton.Location = new System.Drawing.Point(4, 4);
+            this.PTOsubmitButton.Margin = new System.Windows.Forms.Padding(4);
+            this.PTOsubmitButton.Name = "PTOsubmitButton";
+            this.PTOsubmitButton.Size = new System.Drawing.Size(1487, 65);
+            this.PTOsubmitButton.TabIndex = 16;
+            this.PTOsubmitButton.Text = "Submit";
+            this.PTOsubmitButton.UseVisualStyleBackColor = true;
+            this.PTOsubmitButton.Click += new System.EventHandler(this.PTOsubmitButton_Click);
+            // 
+            // PTODayInput
+            // 
+            this.PTODayInput.FormattingEnabled = true;
+            this.PTODayInput.Items.AddRange(new object[] {
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"});
+            this.PTODayInput.Location = new System.Drawing.Point(3, 78);
+            this.PTODayInput.Name = "PTODayInput";
+            this.PTODayInput.Size = new System.Drawing.Size(1497, 56);
+            this.PTODayInput.TabIndex = 7;
             // 
             // timesheetGroupBox
             // 
@@ -518,30 +657,30 @@
             this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
             this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
             this.tableLayoutPanel10.Controls.Add(this.availabilitySubmitButton, 1, 8);
-            this.tableLayoutPanel10.Controls.Add(this.textBox17, 2, 7);
-            this.tableLayoutPanel10.Controls.Add(this.textBox16, 1, 7);
+            this.tableLayoutPanel10.Controls.Add(this.saturdayEndInput, 2, 7);
+            this.tableLayoutPanel10.Controls.Add(this.saturdayStartInput, 1, 7);
             this.tableLayoutPanel10.Controls.Add(this.label22, 0, 7);
-            this.tableLayoutPanel10.Controls.Add(this.textBox15, 2, 6);
-            this.tableLayoutPanel10.Controls.Add(this.textBox14, 1, 6);
+            this.tableLayoutPanel10.Controls.Add(this.fridayEndInput, 2, 6);
+            this.tableLayoutPanel10.Controls.Add(this.fridayStartInput, 1, 6);
             this.tableLayoutPanel10.Controls.Add(this.label21, 0, 6);
-            this.tableLayoutPanel10.Controls.Add(this.textBox13, 2, 5);
-            this.tableLayoutPanel10.Controls.Add(this.textBox12, 1, 5);
+            this.tableLayoutPanel10.Controls.Add(this.thursdayEndInput, 2, 5);
+            this.tableLayoutPanel10.Controls.Add(this.thursdayStartInput, 1, 5);
             this.tableLayoutPanel10.Controls.Add(this.label20, 0, 5);
-            this.tableLayoutPanel10.Controls.Add(this.textBox11, 2, 4);
-            this.tableLayoutPanel10.Controls.Add(this.textBox10, 1, 4);
+            this.tableLayoutPanel10.Controls.Add(this.wednesdayEndInput, 2, 4);
+            this.tableLayoutPanel10.Controls.Add(this.wednesdayStartInput, 1, 4);
             this.tableLayoutPanel10.Controls.Add(this.label19, 0, 4);
-            this.tableLayoutPanel10.Controls.Add(this.textBox9, 2, 3);
-            this.tableLayoutPanel10.Controls.Add(this.textBox8, 1, 3);
+            this.tableLayoutPanel10.Controls.Add(this.tuesdayEndInput, 2, 3);
+            this.tableLayoutPanel10.Controls.Add(this.tuesdayStartInput, 1, 3);
             this.tableLayoutPanel10.Controls.Add(this.label18, 0, 3);
-            this.tableLayoutPanel10.Controls.Add(this.textBox7, 2, 2);
-            this.tableLayoutPanel10.Controls.Add(this.textBox6, 1, 2);
+            this.tableLayoutPanel10.Controls.Add(this.mondayEndInput, 2, 2);
+            this.tableLayoutPanel10.Controls.Add(this.mondayStartInput, 1, 2);
             this.tableLayoutPanel10.Controls.Add(this.label17, 0, 2);
-            this.tableLayoutPanel10.Controls.Add(this.textBox5, 2, 1);
+            this.tableLayoutPanel10.Controls.Add(this.sundayEndInput, 2, 1);
             this.tableLayoutPanel10.Controls.Add(this.label16, 0, 1);
             this.tableLayoutPanel10.Controls.Add(this.label14, 2, 0);
             this.tableLayoutPanel10.Controls.Add(this.label13, 1, 0);
             this.tableLayoutPanel10.Controls.Add(this.label15, 0, 0);
-            this.tableLayoutPanel10.Controls.Add(this.textBox4, 1, 1);
+            this.tableLayoutPanel10.Controls.Add(this.sundayStartInput, 1, 1);
             this.tableLayoutPanel10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel10.Location = new System.Drawing.Point(4, 66);
             this.tableLayoutPanel10.Margin = new System.Windows.Forms.Padding(4);
@@ -570,26 +709,27 @@
             this.availabilitySubmitButton.TabIndex = 27;
             this.availabilitySubmitButton.Text = "Submit";
             this.availabilitySubmitButton.UseVisualStyleBackColor = true;
+            this.availabilitySubmitButton.Click += new System.EventHandler(this.availabilitySubmitButton_Click);
             // 
-            // textBox17
+            // saturdayEndInput
             // 
-            this.textBox17.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox17.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F);
-            this.textBox17.Location = new System.Drawing.Point(1000, 361);
-            this.textBox17.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(491, 49);
-            this.textBox17.TabIndex = 23;
+            this.saturdayEndInput.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.saturdayEndInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F);
+            this.saturdayEndInput.Location = new System.Drawing.Point(1000, 361);
+            this.saturdayEndInput.Margin = new System.Windows.Forms.Padding(4);
+            this.saturdayEndInput.Name = "saturdayEndInput";
+            this.saturdayEndInput.Size = new System.Drawing.Size(491, 49);
+            this.saturdayEndInput.TabIndex = 23;
             // 
-            // textBox16
+            // saturdayStartInput
             // 
-            this.textBox16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox16.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F);
-            this.textBox16.Location = new System.Drawing.Point(502, 361);
-            this.textBox16.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(490, 49);
-            this.textBox16.TabIndex = 22;
+            this.saturdayStartInput.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.saturdayStartInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F);
+            this.saturdayStartInput.Location = new System.Drawing.Point(502, 361);
+            this.saturdayStartInput.Margin = new System.Windows.Forms.Padding(4);
+            this.saturdayStartInput.Name = "saturdayStartInput";
+            this.saturdayStartInput.Size = new System.Drawing.Size(490, 49);
+            this.saturdayStartInput.TabIndex = 22;
             // 
             // label22
             // 
@@ -602,25 +742,25 @@
             this.label22.TabIndex = 21;
             this.label22.Text = "Saturday";
             // 
-            // textBox15
+            // fridayEndInput
             // 
-            this.textBox15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox15.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F);
-            this.textBox15.Location = new System.Drawing.Point(1000, 310);
-            this.textBox15.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(491, 49);
-            this.textBox15.TabIndex = 20;
+            this.fridayEndInput.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.fridayEndInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F);
+            this.fridayEndInput.Location = new System.Drawing.Point(1000, 310);
+            this.fridayEndInput.Margin = new System.Windows.Forms.Padding(4);
+            this.fridayEndInput.Name = "fridayEndInput";
+            this.fridayEndInput.Size = new System.Drawing.Size(491, 49);
+            this.fridayEndInput.TabIndex = 20;
             // 
-            // textBox14
+            // fridayStartInput
             // 
-            this.textBox14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F);
-            this.textBox14.Location = new System.Drawing.Point(502, 310);
-            this.textBox14.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(490, 49);
-            this.textBox14.TabIndex = 19;
+            this.fridayStartInput.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.fridayStartInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F);
+            this.fridayStartInput.Location = new System.Drawing.Point(502, 310);
+            this.fridayStartInput.Margin = new System.Windows.Forms.Padding(4);
+            this.fridayStartInput.Name = "fridayStartInput";
+            this.fridayStartInput.Size = new System.Drawing.Size(490, 49);
+            this.fridayStartInput.TabIndex = 19;
             // 
             // label21
             // 
@@ -633,25 +773,25 @@
             this.label21.TabIndex = 18;
             this.label21.Text = "Friday";
             // 
-            // textBox13
+            // thursdayEndInput
             // 
-            this.textBox13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F);
-            this.textBox13.Location = new System.Drawing.Point(1000, 259);
-            this.textBox13.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(491, 49);
-            this.textBox13.TabIndex = 17;
+            this.thursdayEndInput.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.thursdayEndInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F);
+            this.thursdayEndInput.Location = new System.Drawing.Point(1000, 259);
+            this.thursdayEndInput.Margin = new System.Windows.Forms.Padding(4);
+            this.thursdayEndInput.Name = "thursdayEndInput";
+            this.thursdayEndInput.Size = new System.Drawing.Size(491, 49);
+            this.thursdayEndInput.TabIndex = 17;
             // 
-            // textBox12
+            // thursdayStartInput
             // 
-            this.textBox12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F);
-            this.textBox12.Location = new System.Drawing.Point(502, 259);
-            this.textBox12.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(490, 49);
-            this.textBox12.TabIndex = 16;
+            this.thursdayStartInput.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.thursdayStartInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F);
+            this.thursdayStartInput.Location = new System.Drawing.Point(502, 259);
+            this.thursdayStartInput.Margin = new System.Windows.Forms.Padding(4);
+            this.thursdayStartInput.Name = "thursdayStartInput";
+            this.thursdayStartInput.Size = new System.Drawing.Size(490, 49);
+            this.thursdayStartInput.TabIndex = 16;
             // 
             // label20
             // 
@@ -664,25 +804,25 @@
             this.label20.TabIndex = 15;
             this.label20.Text = "Thursday";
             // 
-            // textBox11
+            // wednesdayEndInput
             // 
-            this.textBox11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F);
-            this.textBox11.Location = new System.Drawing.Point(1000, 208);
-            this.textBox11.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(491, 49);
-            this.textBox11.TabIndex = 14;
+            this.wednesdayEndInput.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.wednesdayEndInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F);
+            this.wednesdayEndInput.Location = new System.Drawing.Point(1000, 208);
+            this.wednesdayEndInput.Margin = new System.Windows.Forms.Padding(4);
+            this.wednesdayEndInput.Name = "wednesdayEndInput";
+            this.wednesdayEndInput.Size = new System.Drawing.Size(491, 49);
+            this.wednesdayEndInput.TabIndex = 14;
             // 
-            // textBox10
+            // wednesdayStartInput
             // 
-            this.textBox10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F);
-            this.textBox10.Location = new System.Drawing.Point(502, 208);
-            this.textBox10.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(490, 49);
-            this.textBox10.TabIndex = 13;
+            this.wednesdayStartInput.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.wednesdayStartInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F);
+            this.wednesdayStartInput.Location = new System.Drawing.Point(502, 208);
+            this.wednesdayStartInput.Margin = new System.Windows.Forms.Padding(4);
+            this.wednesdayStartInput.Name = "wednesdayStartInput";
+            this.wednesdayStartInput.Size = new System.Drawing.Size(490, 49);
+            this.wednesdayStartInput.TabIndex = 13;
             // 
             // label19
             // 
@@ -695,25 +835,25 @@
             this.label19.TabIndex = 12;
             this.label19.Text = "Wednesday";
             // 
-            // textBox9
+            // tuesdayEndInput
             // 
-            this.textBox9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F);
-            this.textBox9.Location = new System.Drawing.Point(1000, 157);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(491, 49);
-            this.textBox9.TabIndex = 11;
+            this.tuesdayEndInput.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tuesdayEndInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F);
+            this.tuesdayEndInput.Location = new System.Drawing.Point(1000, 157);
+            this.tuesdayEndInput.Margin = new System.Windows.Forms.Padding(4);
+            this.tuesdayEndInput.Name = "tuesdayEndInput";
+            this.tuesdayEndInput.Size = new System.Drawing.Size(491, 49);
+            this.tuesdayEndInput.TabIndex = 11;
             // 
-            // textBox8
+            // tuesdayStartInput
             // 
-            this.textBox8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F);
-            this.textBox8.Location = new System.Drawing.Point(502, 157);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(490, 49);
-            this.textBox8.TabIndex = 10;
+            this.tuesdayStartInput.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tuesdayStartInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F);
+            this.tuesdayStartInput.Location = new System.Drawing.Point(502, 157);
+            this.tuesdayStartInput.Margin = new System.Windows.Forms.Padding(4);
+            this.tuesdayStartInput.Name = "tuesdayStartInput";
+            this.tuesdayStartInput.Size = new System.Drawing.Size(490, 49);
+            this.tuesdayStartInput.TabIndex = 10;
             // 
             // label18
             // 
@@ -726,25 +866,25 @@
             this.label18.TabIndex = 9;
             this.label18.Text = "Tuesday";
             // 
-            // textBox7
+            // mondayEndInput
             // 
-            this.textBox7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F);
-            this.textBox7.Location = new System.Drawing.Point(1000, 106);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(491, 49);
-            this.textBox7.TabIndex = 8;
+            this.mondayEndInput.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mondayEndInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F);
+            this.mondayEndInput.Location = new System.Drawing.Point(1000, 106);
+            this.mondayEndInput.Margin = new System.Windows.Forms.Padding(4);
+            this.mondayEndInput.Name = "mondayEndInput";
+            this.mondayEndInput.Size = new System.Drawing.Size(491, 49);
+            this.mondayEndInput.TabIndex = 8;
             // 
-            // textBox6
+            // mondayStartInput
             // 
-            this.textBox6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F);
-            this.textBox6.Location = new System.Drawing.Point(502, 106);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(490, 49);
-            this.textBox6.TabIndex = 7;
+            this.mondayStartInput.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mondayStartInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F);
+            this.mondayStartInput.Location = new System.Drawing.Point(502, 106);
+            this.mondayStartInput.Margin = new System.Windows.Forms.Padding(4);
+            this.mondayStartInput.Name = "mondayStartInput";
+            this.mondayStartInput.Size = new System.Drawing.Size(490, 49);
+            this.mondayStartInput.TabIndex = 7;
             // 
             // label17
             // 
@@ -757,15 +897,15 @@
             this.label17.TabIndex = 6;
             this.label17.Text = "Monday";
             // 
-            // textBox5
+            // sundayEndInput
             // 
-            this.textBox5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F);
-            this.textBox5.Location = new System.Drawing.Point(1000, 55);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(491, 49);
-            this.textBox5.TabIndex = 5;
+            this.sundayEndInput.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sundayEndInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F);
+            this.sundayEndInput.Location = new System.Drawing.Point(1000, 55);
+            this.sundayEndInput.Margin = new System.Windows.Forms.Padding(4);
+            this.sundayEndInput.Name = "sundayEndInput";
+            this.sundayEndInput.Size = new System.Drawing.Size(491, 49);
+            this.sundayEndInput.TabIndex = 5;
             // 
             // label16
             // 
@@ -811,148 +951,27 @@
             this.label15.TabIndex = 0;
             this.label15.Text = "Day";
             // 
-            // textBox4
+            // sundayStartInput
             // 
-            this.textBox4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F);
-            this.textBox4.Location = new System.Drawing.Point(502, 55);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(490, 49);
-            this.textBox4.TabIndex = 4;
+            this.sundayStartInput.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sundayStartInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F);
+            this.sundayStartInput.Location = new System.Drawing.Point(502, 55);
+            this.sundayStartInput.Margin = new System.Windows.Forms.Padding(4);
+            this.sundayStartInput.Name = "sundayStartInput";
+            this.sundayStartInput.Size = new System.Drawing.Size(490, 49);
+            this.sundayStartInput.TabIndex = 4;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(4, 0);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(1302, 46);
+            this.label12.Size = new System.Drawing.Size(1459, 42);
             this.label12.TabIndex = 0;
-            this.label12.Text = "Enter times you can work. If you cannot work that day leave them empty.";
-            // 
-            // PTOgroupBox
-            // 
-            this.PTOgroupBox.Controls.Add(this.tableLayoutPanel3);
-            this.PTOgroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PTOgroupBox.Location = new System.Drawing.Point(0, 0);
-            this.PTOgroupBox.Margin = new System.Windows.Forms.Padding(4);
-            this.PTOgroupBox.Name = "PTOgroupBox";
-            this.PTOgroupBox.Padding = new System.Windows.Forms.Padding(4);
-            this.PTOgroupBox.Size = new System.Drawing.Size(1511, 587);
-            this.PTOgroupBox.TabIndex = 12;
-            this.PTOgroupBox.TabStop = false;
-            this.PTOgroupBox.Text = "PTO Request";
-            // 
-            // tableLayoutPanel3
-            // 
-            this.tableLayoutPanel3.ColumnCount = 1;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Controls.Add(this.PTOReasonInput, 0, 5);
-            this.tableLayoutPanel3.Controls.Add(this.label11, 0, 4);
-            this.tableLayoutPanel3.Controls.Add(this.PTOHoursInput, 0, 3);
-            this.tableLayoutPanel3.Controls.Add(this.label10, 0, 2);
-            this.tableLayoutPanel3.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel8, 0, 6);
-            this.tableLayoutPanel3.Controls.Add(this.PTODayInput, 0, 1);
-            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(4, 52);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 7;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(1503, 531);
-            this.tableLayoutPanel3.TabIndex = 0;
-            // 
-            // PTOReasonInput
-            // 
-            this.PTOReasonInput.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PTOReasonInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.PTOReasonInput.Location = new System.Drawing.Point(4, 379);
-            this.PTOReasonInput.Margin = new System.Windows.Forms.Padding(4);
-            this.PTOReasonInput.Name = "PTOReasonInput";
-            this.PTOReasonInput.Size = new System.Drawing.Size(1495, 36);
-            this.PTOReasonInput.TabIndex = 5;
-            // 
-            // label11
-            // 
-            this.label11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label11.Location = new System.Drawing.Point(4, 300);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(1495, 75);
-            this.label11.TabIndex = 4;
-            this.label11.Text = "Why are you requesting off?";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // PTOHoursInput
-            // 
-            this.PTOHoursInput.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PTOHoursInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.PTOHoursInput.Location = new System.Drawing.Point(4, 229);
-            this.PTOHoursInput.Margin = new System.Windows.Forms.Padding(4);
-            this.PTOHoursInput.Name = "PTOHoursInput";
-            this.PTOHoursInput.Size = new System.Drawing.Size(1495, 36);
-            this.PTOHoursInput.TabIndex = 3;
-            // 
-            // label10
-            // 
-            this.label10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label10.Location = new System.Drawing.Point(4, 150);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(1495, 75);
-            this.label10.TabIndex = 2;
-            this.label10.Text = "How many hours are you requesting off?";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label1
-            // 
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label1.Location = new System.Drawing.Point(4, 0);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1495, 75);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "What day are you requesting off?";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // tableLayoutPanel8
-            // 
-            this.tableLayoutPanel8.ColumnCount = 1;
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel8.Controls.Add(this.PTOsubmitButton, 0, 0);
-            this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel8.Location = new System.Drawing.Point(4, 454);
-            this.tableLayoutPanel8.Margin = new System.Windows.Forms.Padding(4);
-            this.tableLayoutPanel8.Name = "tableLayoutPanel8";
-            this.tableLayoutPanel8.RowCount = 1;
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(1495, 73);
-            this.tableLayoutPanel8.TabIndex = 6;
-            // 
-            // PTOsubmitButton
-            // 
-            this.PTOsubmitButton.AutoSize = true;
-            this.PTOsubmitButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PTOsubmitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.PTOsubmitButton.Location = new System.Drawing.Point(4, 4);
-            this.PTOsubmitButton.Margin = new System.Windows.Forms.Padding(4);
-            this.PTOsubmitButton.Name = "PTOsubmitButton";
-            this.PTOsubmitButton.Size = new System.Drawing.Size(1487, 65);
-            this.PTOsubmitButton.TabIndex = 16;
-            this.PTOsubmitButton.Text = "Submit";
-            this.PTOsubmitButton.UseVisualStyleBackColor = true;
-            this.PTOsubmitButton.Click += new System.EventHandler(this.PTOsubmitButton_Click);
+            this.label12.Text = "Enter times you can work. If you cannot work that day leave them empty (2400 Form" +
+    "at).";
             // 
             // employeePanel
             // 
@@ -1165,22 +1184,6 @@
             this.statusLabel.Text = "Status: Clocked out";
             this.statusLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // PTODayInput
-            // 
-            this.PTODayInput.FormattingEnabled = true;
-            this.PTODayInput.Items.AddRange(new object[] {
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday",
-            "Saturday",
-            "Sunday"});
-            this.PTODayInput.Location = new System.Drawing.Point(3, 78);
-            this.PTODayInput.Name = "PTODayInput";
-            this.PTODayInput.Size = new System.Drawing.Size(1497, 56);
-            this.PTODayInput.TabIndex = 7;
-            // 
             // Employee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1196,6 +1199,11 @@
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            this.PTOgroupBox.ResumeLayout(false);
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel3.PerformLayout();
+            this.tableLayoutPanel8.ResumeLayout(false);
+            this.tableLayoutPanel8.PerformLayout();
             this.timesheetGroupBox.ResumeLayout(false);
             this.tableLayoutPanel7.ResumeLayout(false);
             this.tableLayoutPanel7.PerformLayout();
@@ -1209,11 +1217,6 @@
             this.tableLayoutPanel9.PerformLayout();
             this.tableLayoutPanel10.ResumeLayout(false);
             this.tableLayoutPanel10.PerformLayout();
-            this.PTOgroupBox.ResumeLayout(false);
-            this.tableLayoutPanel3.ResumeLayout(false);
-            this.tableLayoutPanel3.PerformLayout();
-            this.tableLayoutPanel8.ResumeLayout(false);
-            this.tableLayoutPanel8.PerformLayout();
             this.employeePanel.ResumeLayout(false);
             this.employeePanel.PerformLayout();
             this.tableLayoutPanel4.ResumeLayout(false);
@@ -1258,22 +1261,22 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel10;
-        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.TextBox fridayStartInput;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox thursdayStartInput;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox wednesdayStartInput;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox tuesdayStartInput;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox mondayStartInput;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox sundayStartInput;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox16;
+        private System.Windows.Forms.TextBox saturdayStartInput;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Button viewSchedule;
         private System.Windows.Forms.GroupBox scheduleGroupBox;
@@ -1297,13 +1300,13 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button PTOsubmitButton;
         private System.Windows.Forms.Button availabilitySubmitButton;
-        private System.Windows.Forms.TextBox textBox17;
-        private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox saturdayEndInput;
+        private System.Windows.Forms.TextBox fridayEndInput;
+        private System.Windows.Forms.TextBox thursdayEndInput;
+        private System.Windows.Forms.TextBox wednesdayEndInput;
+        private System.Windows.Forms.TextBox tuesdayEndInput;
+        private System.Windows.Forms.TextBox mondayEndInput;
+        private System.Windows.Forms.TextBox sundayEndInput;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Panel LogoutPanel;
         private System.Windows.Forms.Button CancelLogoutButton;
