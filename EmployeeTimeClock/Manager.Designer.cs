@@ -67,13 +67,13 @@
             this.viewTimesheetGroupBox = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
-            this.label9 = new System.Windows.Forms.Label();
+            this.clockOutTimeLabel = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.endBreakTimeLabel = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.startBreakTimeLabel = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.clockInTimeLabel = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel20 = new System.Windows.Forms.TableLayoutPanel();
             this.hrsWorkedLabel = new System.Windows.Forms.Label();
@@ -396,7 +396,6 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(457, 579);
             this.tableLayoutPanel3.TabIndex = 0;
-            this.tableLayoutPanel3.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel3_Paint);
             // 
             // calculatePaymentButton
             // 
@@ -504,6 +503,7 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.scheduleGroupBox);
             this.splitContainer1.Panel1.Controls.Add(this.editTimesheetGroupBox);
             this.splitContainer1.Panel1.Controls.Add(this.viewTimesheetGroupBox);
             this.splitContainer1.Panel1.Controls.Add(this.generateScheduleGroupBox);
@@ -511,7 +511,6 @@
             this.splitContainer1.Panel1.Controls.Add(this.calculatePaymentGroupBox);
             this.splitContainer1.Panel1.Controls.Add(this.viewAvailabilityGroupBox);
             this.splitContainer1.Panel1.Controls.Add(this.PTORequestGroupBox);
-            this.splitContainer1.Panel1.Controls.Add(this.scheduleGroupBox);
             // 
             // splitContainer1.Panel2
             // 
@@ -754,13 +753,13 @@
             this.tableLayoutPanel7.ColumnCount = 2;
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.65517F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.34483F));
-            this.tableLayoutPanel7.Controls.Add(this.label9, 1, 3);
+            this.tableLayoutPanel7.Controls.Add(this.clockOutTimeLabel, 1, 3);
             this.tableLayoutPanel7.Controls.Add(this.label8, 0, 3);
-            this.tableLayoutPanel7.Controls.Add(this.label7, 1, 2);
+            this.tableLayoutPanel7.Controls.Add(this.endBreakTimeLabel, 1, 2);
             this.tableLayoutPanel7.Controls.Add(this.label6, 0, 2);
-            this.tableLayoutPanel7.Controls.Add(this.label5, 1, 1);
+            this.tableLayoutPanel7.Controls.Add(this.startBreakTimeLabel, 1, 1);
             this.tableLayoutPanel7.Controls.Add(this.label4, 0, 1);
-            this.tableLayoutPanel7.Controls.Add(this.label3, 1, 0);
+            this.tableLayoutPanel7.Controls.Add(this.clockInTimeLabel, 1, 0);
             this.tableLayoutPanel7.Controls.Add(this.label2, 0, 0);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel7.Location = new System.Drawing.Point(4, 4);
@@ -775,16 +774,16 @@
             this.tableLayoutPanel7.Size = new System.Drawing.Size(1438, 453);
             this.tableLayoutPanel7.TabIndex = 3;
             // 
-            // label9
+            // clockOutTimeLabel
             // 
-            this.label9.AutoSize = true;
-            this.label9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label9.Location = new System.Drawing.Point(718, 339);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(716, 114);
-            this.label9.TabIndex = 7;
-            this.label9.Text = "6:00 pm";
+            this.clockOutTimeLabel.AutoSize = true;
+            this.clockOutTimeLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.clockOutTimeLabel.Location = new System.Drawing.Point(718, 339);
+            this.clockOutTimeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.clockOutTimeLabel.Name = "clockOutTimeLabel";
+            this.clockOutTimeLabel.Size = new System.Drawing.Size(716, 114);
+            this.clockOutTimeLabel.TabIndex = 7;
+            this.clockOutTimeLabel.Text = "6:00 pm";
             // 
             // label8
             // 
@@ -797,16 +796,16 @@
             this.label8.TabIndex = 6;
             this.label8.Text = "Clock out:";
             // 
-            // label7
+            // endBreakTimeLabel
             // 
-            this.label7.AutoSize = true;
-            this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label7.Location = new System.Drawing.Point(718, 226);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(716, 113);
-            this.label7.TabIndex = 5;
-            this.label7.Text = "2:00 pm";
+            this.endBreakTimeLabel.AutoSize = true;
+            this.endBreakTimeLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.endBreakTimeLabel.Location = new System.Drawing.Point(718, 226);
+            this.endBreakTimeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.endBreakTimeLabel.Name = "endBreakTimeLabel";
+            this.endBreakTimeLabel.Size = new System.Drawing.Size(716, 113);
+            this.endBreakTimeLabel.TabIndex = 5;
+            this.endBreakTimeLabel.Text = "2:00 pm";
             // 
             // label6
             // 
@@ -819,16 +818,16 @@
             this.label6.TabIndex = 4;
             this.label6.Text = "Break End:";
             // 
-            // label5
+            // startBreakTimeLabel
             // 
-            this.label5.AutoSize = true;
-            this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label5.Location = new System.Drawing.Point(718, 113);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(716, 113);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "1:00 pm";
+            this.startBreakTimeLabel.AutoSize = true;
+            this.startBreakTimeLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.startBreakTimeLabel.Location = new System.Drawing.Point(718, 113);
+            this.startBreakTimeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.startBreakTimeLabel.Name = "startBreakTimeLabel";
+            this.startBreakTimeLabel.Size = new System.Drawing.Size(716, 113);
+            this.startBreakTimeLabel.TabIndex = 3;
+            this.startBreakTimeLabel.Text = "1:00 pm";
             // 
             // label4
             // 
@@ -841,16 +840,16 @@
             this.label4.TabIndex = 2;
             this.label4.Text = "Break Start:";
             // 
-            // label3
+            // clockInTimeLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.Location = new System.Drawing.Point(718, 0);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(716, 113);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "9:00 am";
+            this.clockInTimeLabel.AutoSize = true;
+            this.clockInTimeLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.clockInTimeLabel.Location = new System.Drawing.Point(718, 0);
+            this.clockInTimeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.clockInTimeLabel.Name = "clockInTimeLabel";
+            this.clockInTimeLabel.Size = new System.Drawing.Size(716, 113);
+            this.clockInTimeLabel.TabIndex = 1;
+            this.clockInTimeLabel.Text = "9:00 am";
             // 
             // label2
             // 
@@ -1137,7 +1136,6 @@
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(351, 55);
             this.textBox10.TabIndex = 17;
-            this.textBox10.TextChanged += new System.EventHandler(this.textBox10_TextChanged);
             // 
             // label16
             // 
@@ -2397,13 +2395,13 @@
         private System.Windows.Forms.GroupBox viewTimesheetGroupBox;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label clockOutTimeLabel;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label endBreakTimeLabel;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label startBreakTimeLabel;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label clockInTimeLabel;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel20;
         private System.Windows.Forms.Button button3;
