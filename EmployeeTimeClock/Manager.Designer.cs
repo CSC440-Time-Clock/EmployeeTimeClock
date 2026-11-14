@@ -49,7 +49,42 @@
             this.editTimesheetButton = new System.Windows.Forms.Button();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.scheduleGroupBox = new System.Windows.Forms.GroupBox();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.scheduleEmployeeSelect = new System.Windows.Forms.ComboBox();
+            this.emplyScheduleTable = new System.Windows.Forms.TableLayoutPanel();
+            this.label87 = new System.Windows.Forms.Label();
+            this.label86 = new System.Windows.Forms.Label();
+            this.label85 = new System.Windows.Forms.Label();
+            this.label84 = new System.Windows.Forms.Label();
+            this.label83 = new System.Windows.Forms.Label();
+            this.label82 = new System.Windows.Forms.Label();
+            this.label81 = new System.Windows.Forms.Label();
+            this.label80 = new System.Windows.Forms.Label();
+            this.label79 = new System.Windows.Forms.Label();
+            this.label78 = new System.Windows.Forms.Label();
+            this.label77 = new System.Windows.Forms.Label();
+            this.label76 = new System.Windows.Forms.Label();
+            this.label75 = new System.Windows.Forms.Label();
+            this.label74 = new System.Windows.Forms.Label();
+            this.label73 = new System.Windows.Forms.Label();
+            this.label72 = new System.Windows.Forms.Label();
+            this.label71 = new System.Windows.Forms.Label();
+            this.label70 = new System.Windows.Forms.Label();
+            this.label69 = new System.Windows.Forms.Label();
+            this.label68 = new System.Windows.Forms.Label();
+            this.label67 = new System.Windows.Forms.Label();
+            this.label66 = new System.Windows.Forms.Label();
+            this.label65 = new System.Windows.Forms.Label();
+            this.label64 = new System.Windows.Forms.Label();
+            this.label63 = new System.Windows.Forms.Label();
+            this.label62 = new System.Windows.Forms.Label();
+            this.label61 = new System.Windows.Forms.Label();
+            this.label58 = new System.Windows.Forms.Label();
+            this.label57 = new System.Windows.Forms.Label();
+            this.label55 = new System.Windows.Forms.Label();
+            this.label53 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.Saturday = new System.Windows.Forms.Label();
             this.Friday = new System.Windows.Forms.Label();
             this.Thursday = new System.Windows.Forms.Label();
@@ -57,21 +92,22 @@
             this.Tuesday = new System.Windows.Forms.Label();
             this.Monday = new System.Windows.Forms.Label();
             this.Sunday = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.editTimesheetGroupBox = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel12 = new System.Windows.Forms.TableLayoutPanel();
-            this.maskedTextBox4 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            this.emplyNewClockOut = new System.Windows.Forms.MaskedTextBox();
+            this.emplyNewBreakEnd = new System.Windows.Forms.MaskedTextBox();
+            this.emplyNewBreakStart = new System.Windows.Forms.MaskedTextBox();
             this.label56 = new System.Windows.Forms.Label();
             this.label54 = new System.Windows.Forms.Label();
             this.label52 = new System.Windows.Forms.Label();
             this.label60 = new System.Windows.Forms.Label();
-            this.comboBox7 = new System.Windows.Forms.ComboBox();
+            this.editTimesheetSelect = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.emplyNewClockIn = new System.Windows.Forms.MaskedTextBox();
             this.tableLayoutPanel21 = new System.Windows.Forms.TableLayoutPanel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.confirmTimesheetEditButton = new System.Windows.Forms.Button();
             this.label59 = new System.Windows.Forms.Label();
             this.viewTimesheetGroupBox = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
@@ -190,7 +226,7 @@
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.scheduleGroupBox.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
+            this.emplyScheduleTable.SuspendLayout();
             this.editTimesheetGroupBox.SuspendLayout();
             this.tableLayoutPanel10.SuspendLayout();
             this.tableLayoutPanel12.SuspendLayout();
@@ -503,7 +539,6 @@
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.scheduleGroupBox);
             this.splitContainer1.Panel1.Controls.Add(this.editTimesheetGroupBox);
             this.splitContainer1.Panel1.Controls.Add(this.viewTimesheetGroupBox);
             this.splitContainer1.Panel1.Controls.Add(this.generateScheduleGroupBox);
@@ -511,6 +546,7 @@
             this.splitContainer1.Panel1.Controls.Add(this.calculatePaymentGroupBox);
             this.splitContainer1.Panel1.Controls.Add(this.viewAvailabilityGroupBox);
             this.splitContainer1.Panel1.Controls.Add(this.PTORequestGroupBox);
+            this.splitContainer1.Panel1.Controls.Add(this.scheduleGroupBox);
             // 
             // splitContainer1.Panel2
             // 
@@ -522,7 +558,8 @@
             // 
             // scheduleGroupBox
             // 
-            this.scheduleGroupBox.Controls.Add(this.tableLayoutPanel2);
+            this.scheduleGroupBox.Controls.Add(this.scheduleEmployeeSelect);
+            this.scheduleGroupBox.Controls.Add(this.emplyScheduleTable);
             this.scheduleGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.scheduleGroupBox.Location = new System.Drawing.Point(0, 0);
             this.scheduleGroupBox.Margin = new System.Windows.Forms.Padding(4);
@@ -533,36 +570,420 @@
             this.scheduleGroupBox.TabStop = false;
             this.scheduleGroupBox.Text = "Schedule";
             // 
-            // tableLayoutPanel2
+            // scheduleEmployeeSelect
             // 
-            this.tableLayoutPanel2.ColumnCount = 7;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
-            this.tableLayoutPanel2.Controls.Add(this.Saturday, 6, 0);
-            this.tableLayoutPanel2.Controls.Add(this.Friday, 5, 0);
-            this.tableLayoutPanel2.Controls.Add(this.Thursday, 4, 0);
-            this.tableLayoutPanel2.Controls.Add(this.Wednesday, 3, 0);
-            this.tableLayoutPanel2.Controls.Add(this.Tuesday, 2, 0);
-            this.tableLayoutPanel2.Controls.Add(this.Monday, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.Sunday, 0, 0);
-            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(4, 52);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 6;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 62F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1446, 523);
-            this.tableLayoutPanel2.TabIndex = 3;
+            this.scheduleEmployeeSelect.FormattingEnabled = true;
+            this.scheduleEmployeeSelect.Location = new System.Drawing.Point(213, -3);
+            this.scheduleEmployeeSelect.Name = "scheduleEmployeeSelect";
+            this.scheduleEmployeeSelect.Size = new System.Drawing.Size(526, 56);
+            this.scheduleEmployeeSelect.TabIndex = 4;
+            this.scheduleEmployeeSelect.SelectedIndexChanged += new System.EventHandler(this.scheduleEmployeeSelect_SelectedIndexChanged);
+            // 
+            // emplyScheduleTable
+            // 
+            this.emplyScheduleTable.ColumnCount = 7;
+            this.emplyScheduleTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.emplyScheduleTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
+            this.emplyScheduleTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
+            this.emplyScheduleTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
+            this.emplyScheduleTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
+            this.emplyScheduleTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
+            this.emplyScheduleTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
+            this.emplyScheduleTable.Controls.Add(this.label87, 6, 5);
+            this.emplyScheduleTable.Controls.Add(this.label86, 5, 5);
+            this.emplyScheduleTable.Controls.Add(this.label85, 4, 5);
+            this.emplyScheduleTable.Controls.Add(this.label84, 3, 5);
+            this.emplyScheduleTable.Controls.Add(this.label83, 2, 5);
+            this.emplyScheduleTable.Controls.Add(this.label82, 1, 5);
+            this.emplyScheduleTable.Controls.Add(this.label81, 0, 5);
+            this.emplyScheduleTable.Controls.Add(this.label80, 6, 4);
+            this.emplyScheduleTable.Controls.Add(this.label79, 5, 4);
+            this.emplyScheduleTable.Controls.Add(this.label78, 4, 4);
+            this.emplyScheduleTable.Controls.Add(this.label77, 3, 4);
+            this.emplyScheduleTable.Controls.Add(this.label76, 2, 4);
+            this.emplyScheduleTable.Controls.Add(this.label75, 1, 4);
+            this.emplyScheduleTable.Controls.Add(this.label74, 0, 4);
+            this.emplyScheduleTable.Controls.Add(this.label73, 6, 3);
+            this.emplyScheduleTable.Controls.Add(this.label72, 5, 3);
+            this.emplyScheduleTable.Controls.Add(this.label71, 4, 3);
+            this.emplyScheduleTable.Controls.Add(this.label70, 3, 3);
+            this.emplyScheduleTable.Controls.Add(this.label69, 2, 3);
+            this.emplyScheduleTable.Controls.Add(this.label68, 1, 3);
+            this.emplyScheduleTable.Controls.Add(this.label67, 0, 3);
+            this.emplyScheduleTable.Controls.Add(this.label66, 6, 2);
+            this.emplyScheduleTable.Controls.Add(this.label65, 5, 2);
+            this.emplyScheduleTable.Controls.Add(this.label64, 4, 2);
+            this.emplyScheduleTable.Controls.Add(this.label63, 3, 2);
+            this.emplyScheduleTable.Controls.Add(this.label62, 2, 2);
+            this.emplyScheduleTable.Controls.Add(this.label61, 1, 2);
+            this.emplyScheduleTable.Controls.Add(this.label58, 0, 2);
+            this.emplyScheduleTable.Controls.Add(this.label57, 6, 1);
+            this.emplyScheduleTable.Controls.Add(this.label55, 5, 1);
+            this.emplyScheduleTable.Controls.Add(this.label53, 4, 1);
+            this.emplyScheduleTable.Controls.Add(this.label9, 3, 1);
+            this.emplyScheduleTable.Controls.Add(this.label7, 2, 1);
+            this.emplyScheduleTable.Controls.Add(this.label5, 1, 1);
+            this.emplyScheduleTable.Controls.Add(this.Saturday, 6, 0);
+            this.emplyScheduleTable.Controls.Add(this.Friday, 5, 0);
+            this.emplyScheduleTable.Controls.Add(this.Thursday, 4, 0);
+            this.emplyScheduleTable.Controls.Add(this.Wednesday, 3, 0);
+            this.emplyScheduleTable.Controls.Add(this.Tuesday, 2, 0);
+            this.emplyScheduleTable.Controls.Add(this.Monday, 1, 0);
+            this.emplyScheduleTable.Controls.Add(this.Sunday, 0, 0);
+            this.emplyScheduleTable.Controls.Add(this.label3, 0, 1);
+            this.emplyScheduleTable.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.emplyScheduleTable.Location = new System.Drawing.Point(4, 52);
+            this.emplyScheduleTable.Margin = new System.Windows.Forms.Padding(4);
+            this.emplyScheduleTable.Name = "emplyScheduleTable";
+            this.emplyScheduleTable.RowCount = 6;
+            this.emplyScheduleTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 62F));
+            this.emplyScheduleTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.emplyScheduleTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.emplyScheduleTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.emplyScheduleTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.emplyScheduleTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.emplyScheduleTable.Size = new System.Drawing.Size(1446, 523);
+            this.emplyScheduleTable.TabIndex = 3;
+            // 
+            // label87
+            // 
+            this.label87.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label87.AutoSize = true;
+            this.label87.Location = new System.Drawing.Point(1239, 452);
+            this.label87.Name = "label87";
+            this.label87.Size = new System.Drawing.Size(32, 48);
+            this.label87.TabIndex = 41;
+            this.label87.Text = ".";
+            // 
+            // label86
+            // 
+            this.label86.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label86.AutoSize = true;
+            this.label86.Location = new System.Drawing.Point(1033, 452);
+            this.label86.Name = "label86";
+            this.label86.Size = new System.Drawing.Size(32, 48);
+            this.label86.TabIndex = 40;
+            this.label86.Text = ".";
+            // 
+            // label85
+            // 
+            this.label85.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label85.AutoSize = true;
+            this.label85.Location = new System.Drawing.Point(827, 452);
+            this.label85.Name = "label85";
+            this.label85.Size = new System.Drawing.Size(32, 48);
+            this.label85.TabIndex = 39;
+            this.label85.Text = ".";
+            // 
+            // label84
+            // 
+            this.label84.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label84.AutoSize = true;
+            this.label84.Location = new System.Drawing.Point(621, 452);
+            this.label84.Name = "label84";
+            this.label84.Size = new System.Drawing.Size(32, 48);
+            this.label84.TabIndex = 38;
+            this.label84.Text = ".";
+            // 
+            // label83
+            // 
+            this.label83.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label83.AutoSize = true;
+            this.label83.Location = new System.Drawing.Point(415, 452);
+            this.label83.Name = "label83";
+            this.label83.Size = new System.Drawing.Size(32, 48);
+            this.label83.TabIndex = 37;
+            this.label83.Text = ".";
+            // 
+            // label82
+            // 
+            this.label82.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label82.AutoSize = true;
+            this.label82.Location = new System.Drawing.Point(209, 452);
+            this.label82.Name = "label82";
+            this.label82.Size = new System.Drawing.Size(32, 48);
+            this.label82.TabIndex = 36;
+            this.label82.Text = ".";
+            // 
+            // label81
+            // 
+            this.label81.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label81.AutoSize = true;
+            this.label81.Location = new System.Drawing.Point(3, 452);
+            this.label81.Name = "label81";
+            this.label81.Size = new System.Drawing.Size(32, 48);
+            this.label81.TabIndex = 35;
+            this.label81.Text = ".";
+            // 
+            // label80
+            // 
+            this.label80.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label80.AutoSize = true;
+            this.label80.Location = new System.Drawing.Point(1239, 360);
+            this.label80.Name = "label80";
+            this.label80.Size = new System.Drawing.Size(32, 48);
+            this.label80.TabIndex = 34;
+            this.label80.Text = ".";
+            // 
+            // label79
+            // 
+            this.label79.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label79.AutoSize = true;
+            this.label79.Location = new System.Drawing.Point(1033, 360);
+            this.label79.Name = "label79";
+            this.label79.Size = new System.Drawing.Size(32, 48);
+            this.label79.TabIndex = 33;
+            this.label79.Text = ".";
+            // 
+            // label78
+            // 
+            this.label78.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label78.AutoSize = true;
+            this.label78.Location = new System.Drawing.Point(827, 360);
+            this.label78.Name = "label78";
+            this.label78.Size = new System.Drawing.Size(32, 48);
+            this.label78.TabIndex = 32;
+            this.label78.Text = ".";
+            // 
+            // label77
+            // 
+            this.label77.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label77.AutoSize = true;
+            this.label77.Location = new System.Drawing.Point(621, 360);
+            this.label77.Name = "label77";
+            this.label77.Size = new System.Drawing.Size(32, 48);
+            this.label77.TabIndex = 31;
+            this.label77.Text = ".";
+            // 
+            // label76
+            // 
+            this.label76.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label76.AutoSize = true;
+            this.label76.Location = new System.Drawing.Point(415, 360);
+            this.label76.Name = "label76";
+            this.label76.Size = new System.Drawing.Size(32, 48);
+            this.label76.TabIndex = 30;
+            this.label76.Text = ".";
+            // 
+            // label75
+            // 
+            this.label75.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label75.AutoSize = true;
+            this.label75.Location = new System.Drawing.Point(209, 360);
+            this.label75.Name = "label75";
+            this.label75.Size = new System.Drawing.Size(32, 48);
+            this.label75.TabIndex = 29;
+            this.label75.Text = ".";
+            // 
+            // label74
+            // 
+            this.label74.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label74.AutoSize = true;
+            this.label74.Location = new System.Drawing.Point(3, 360);
+            this.label74.Name = "label74";
+            this.label74.Size = new System.Drawing.Size(32, 48);
+            this.label74.TabIndex = 28;
+            this.label74.Text = ".";
+            // 
+            // label73
+            // 
+            this.label73.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label73.AutoSize = true;
+            this.label73.Location = new System.Drawing.Point(1239, 268);
+            this.label73.Name = "label73";
+            this.label73.Size = new System.Drawing.Size(32, 48);
+            this.label73.TabIndex = 27;
+            this.label73.Text = ".";
+            // 
+            // label72
+            // 
+            this.label72.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label72.AutoSize = true;
+            this.label72.Location = new System.Drawing.Point(1033, 268);
+            this.label72.Name = "label72";
+            this.label72.Size = new System.Drawing.Size(32, 48);
+            this.label72.TabIndex = 26;
+            this.label72.Text = ".";
+            // 
+            // label71
+            // 
+            this.label71.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label71.AutoSize = true;
+            this.label71.Location = new System.Drawing.Point(827, 268);
+            this.label71.Name = "label71";
+            this.label71.Size = new System.Drawing.Size(32, 48);
+            this.label71.TabIndex = 25;
+            this.label71.Text = ".";
+            // 
+            // label70
+            // 
+            this.label70.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label70.AutoSize = true;
+            this.label70.Location = new System.Drawing.Point(621, 268);
+            this.label70.Name = "label70";
+            this.label70.Size = new System.Drawing.Size(32, 48);
+            this.label70.TabIndex = 24;
+            this.label70.Text = ".";
+            // 
+            // label69
+            // 
+            this.label69.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label69.AutoSize = true;
+            this.label69.Location = new System.Drawing.Point(415, 268);
+            this.label69.Name = "label69";
+            this.label69.Size = new System.Drawing.Size(32, 48);
+            this.label69.TabIndex = 23;
+            this.label69.Text = ".";
+            // 
+            // label68
+            // 
+            this.label68.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label68.AutoSize = true;
+            this.label68.Location = new System.Drawing.Point(209, 268);
+            this.label68.Name = "label68";
+            this.label68.Size = new System.Drawing.Size(32, 48);
+            this.label68.TabIndex = 22;
+            this.label68.Text = ".";
+            // 
+            // label67
+            // 
+            this.label67.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label67.AutoSize = true;
+            this.label67.Location = new System.Drawing.Point(3, 268);
+            this.label67.Name = "label67";
+            this.label67.Size = new System.Drawing.Size(32, 48);
+            this.label67.TabIndex = 21;
+            this.label67.Text = ".";
+            // 
+            // label66
+            // 
+            this.label66.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label66.AutoSize = true;
+            this.label66.Location = new System.Drawing.Point(1239, 176);
+            this.label66.Name = "label66";
+            this.label66.Size = new System.Drawing.Size(32, 48);
+            this.label66.TabIndex = 20;
+            this.label66.Text = ".";
+            // 
+            // label65
+            // 
+            this.label65.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label65.AutoSize = true;
+            this.label65.Location = new System.Drawing.Point(1033, 176);
+            this.label65.Name = "label65";
+            this.label65.Size = new System.Drawing.Size(32, 48);
+            this.label65.TabIndex = 19;
+            this.label65.Text = ".";
+            // 
+            // label64
+            // 
+            this.label64.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label64.AutoSize = true;
+            this.label64.Location = new System.Drawing.Point(827, 176);
+            this.label64.Name = "label64";
+            this.label64.Size = new System.Drawing.Size(32, 48);
+            this.label64.TabIndex = 18;
+            this.label64.Text = ".";
+            // 
+            // label63
+            // 
+            this.label63.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label63.AutoSize = true;
+            this.label63.Location = new System.Drawing.Point(621, 176);
+            this.label63.Name = "label63";
+            this.label63.Size = new System.Drawing.Size(32, 48);
+            this.label63.TabIndex = 17;
+            this.label63.Text = ".";
+            // 
+            // label62
+            // 
+            this.label62.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label62.AutoSize = true;
+            this.label62.Location = new System.Drawing.Point(415, 176);
+            this.label62.Name = "label62";
+            this.label62.Size = new System.Drawing.Size(32, 48);
+            this.label62.TabIndex = 16;
+            this.label62.Text = ".";
+            // 
+            // label61
+            // 
+            this.label61.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label61.AutoSize = true;
+            this.label61.Location = new System.Drawing.Point(209, 176);
+            this.label61.Name = "label61";
+            this.label61.Size = new System.Drawing.Size(32, 48);
+            this.label61.TabIndex = 15;
+            this.label61.Text = ".";
+            // 
+            // label58
+            // 
+            this.label58.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label58.AutoSize = true;
+            this.label58.Location = new System.Drawing.Point(3, 176);
+            this.label58.Name = "label58";
+            this.label58.Size = new System.Drawing.Size(32, 48);
+            this.label58.TabIndex = 14;
+            this.label58.Text = ".";
+            // 
+            // label57
+            // 
+            this.label57.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label57.AutoSize = true;
+            this.label57.Location = new System.Drawing.Point(1239, 84);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(32, 48);
+            this.label57.TabIndex = 13;
+            this.label57.Text = ".";
+            // 
+            // label55
+            // 
+            this.label55.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label55.AutoSize = true;
+            this.label55.Location = new System.Drawing.Point(1033, 84);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(32, 48);
+            this.label55.TabIndex = 12;
+            this.label55.Text = ".";
+            // 
+            // label53
+            // 
+            this.label53.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label53.AutoSize = true;
+            this.label53.Location = new System.Drawing.Point(827, 84);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(32, 48);
+            this.label53.TabIndex = 11;
+            this.label53.Text = ".";
+            // 
+            // label9
+            // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(621, 84);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(32, 48);
+            this.label9.TabIndex = 10;
+            this.label9.Text = ".";
+            // 
+            // label7
+            // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(415, 84);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(32, 48);
+            this.label7.TabIndex = 9;
+            this.label7.Text = ".";
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(209, 84);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(32, 48);
+            this.label5.TabIndex = 8;
+            this.label5.Text = ".";
             // 
             // Saturday
             // 
@@ -655,6 +1076,16 @@
             this.Sunday.Text = "Sunday";
             this.Sunday.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(3, 84);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(32, 48);
+            this.label3.TabIndex = 7;
+            this.label3.Text = ".";
+            // 
             // editTimesheetGroupBox
             // 
             this.editTimesheetGroupBox.Controls.Add(this.tableLayoutPanel10);
@@ -666,7 +1097,7 @@
             this.editTimesheetGroupBox.Size = new System.Drawing.Size(1454, 579);
             this.editTimesheetGroupBox.TabIndex = 13;
             this.editTimesheetGroupBox.TabStop = false;
-            this.editTimesheetGroupBox.Text = "Edit Timesheet";
+            this.editTimesheetGroupBox.Text = "Edit Timesheet (Enter in 2400 Hour Format)";
             // 
             // tableLayoutPanel10
             // 
@@ -689,16 +1120,16 @@
             this.tableLayoutPanel12.ColumnCount = 2;
             this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel12.Controls.Add(this.maskedTextBox4, 1, 4);
-            this.tableLayoutPanel12.Controls.Add(this.maskedTextBox3, 1, 3);
-            this.tableLayoutPanel12.Controls.Add(this.maskedTextBox2, 1, 2);
+            this.tableLayoutPanel12.Controls.Add(this.emplyNewClockOut, 1, 4);
+            this.tableLayoutPanel12.Controls.Add(this.emplyNewBreakEnd, 1, 3);
+            this.tableLayoutPanel12.Controls.Add(this.emplyNewBreakStart, 1, 2);
             this.tableLayoutPanel12.Controls.Add(this.label56, 0, 1);
             this.tableLayoutPanel12.Controls.Add(this.label54, 0, 2);
             this.tableLayoutPanel12.Controls.Add(this.label52, 0, 3);
             this.tableLayoutPanel12.Controls.Add(this.label60, 0, 4);
-            this.tableLayoutPanel12.Controls.Add(this.comboBox7, 0, 0);
+            this.tableLayoutPanel12.Controls.Add(this.editTimesheetSelect, 0, 0);
             this.tableLayoutPanel12.Controls.Add(this.button1, 1, 0);
-            this.tableLayoutPanel12.Controls.Add(this.maskedTextBox1, 1, 1);
+            this.tableLayoutPanel12.Controls.Add(this.emplyNewClockIn, 1, 1);
             this.tableLayoutPanel12.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel12.Location = new System.Drawing.Point(4, 4);
             this.tableLayoutPanel12.Margin = new System.Windows.Forms.Padding(4);
@@ -712,32 +1143,32 @@
             this.tableLayoutPanel12.Size = new System.Drawing.Size(1438, 453);
             this.tableLayoutPanel12.TabIndex = 3;
             // 
-            // maskedTextBox4
+            // emplyNewClockOut
             // 
-            this.maskedTextBox4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.maskedTextBox4.Location = new System.Drawing.Point(723, 364);
-            this.maskedTextBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.maskedTextBox4.Name = "maskedTextBox4";
-            this.maskedTextBox4.Size = new System.Drawing.Size(711, 55);
-            this.maskedTextBox4.TabIndex = 21;
+            this.emplyNewClockOut.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.emplyNewClockOut.Location = new System.Drawing.Point(723, 364);
+            this.emplyNewClockOut.Margin = new System.Windows.Forms.Padding(4);
+            this.emplyNewClockOut.Name = "emplyNewClockOut";
+            this.emplyNewClockOut.Size = new System.Drawing.Size(711, 55);
+            this.emplyNewClockOut.TabIndex = 21;
             // 
-            // maskedTextBox3
+            // emplyNewBreakEnd
             // 
-            this.maskedTextBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.maskedTextBox3.Location = new System.Drawing.Point(723, 274);
-            this.maskedTextBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.maskedTextBox3.Name = "maskedTextBox3";
-            this.maskedTextBox3.Size = new System.Drawing.Size(711, 55);
-            this.maskedTextBox3.TabIndex = 20;
+            this.emplyNewBreakEnd.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.emplyNewBreakEnd.Location = new System.Drawing.Point(723, 274);
+            this.emplyNewBreakEnd.Margin = new System.Windows.Forms.Padding(4);
+            this.emplyNewBreakEnd.Name = "emplyNewBreakEnd";
+            this.emplyNewBreakEnd.Size = new System.Drawing.Size(711, 55);
+            this.emplyNewBreakEnd.TabIndex = 20;
             // 
-            // maskedTextBox2
+            // emplyNewBreakStart
             // 
-            this.maskedTextBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.maskedTextBox2.Location = new System.Drawing.Point(723, 184);
-            this.maskedTextBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(711, 55);
-            this.maskedTextBox2.TabIndex = 19;
+            this.emplyNewBreakStart.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.emplyNewBreakStart.Location = new System.Drawing.Point(723, 184);
+            this.emplyNewBreakStart.Margin = new System.Windows.Forms.Padding(4);
+            this.emplyNewBreakStart.Name = "emplyNewBreakStart";
+            this.emplyNewBreakStart.Size = new System.Drawing.Size(711, 55);
+            this.emplyNewBreakStart.TabIndex = 19;
             // 
             // label56
             // 
@@ -783,16 +1214,16 @@
             this.label60.TabIndex = 8;
             this.label60.Text = "Clock out:";
             // 
-            // comboBox7
+            // editTimesheetSelect
             // 
-            this.comboBox7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Location = new System.Drawing.Point(4, 4);
-            this.comboBox7.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(711, 56);
-            this.comboBox7.TabIndex = 16;
-            this.comboBox7.Text = "Employee";
+            this.editTimesheetSelect.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.editTimesheetSelect.FormattingEnabled = true;
+            this.editTimesheetSelect.Location = new System.Drawing.Point(4, 4);
+            this.editTimesheetSelect.Margin = new System.Windows.Forms.Padding(4);
+            this.editTimesheetSelect.Name = "editTimesheetSelect";
+            this.editTimesheetSelect.Size = new System.Drawing.Size(711, 56);
+            this.editTimesheetSelect.TabIndex = 16;
+            this.editTimesheetSelect.Text = "Employee";
             // 
             // button1
             // 
@@ -805,21 +1236,21 @@
             this.button1.Text = "Confirm";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // maskedTextBox1
+            // emplyNewClockIn
             // 
-            this.maskedTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.maskedTextBox1.Location = new System.Drawing.Point(723, 94);
-            this.maskedTextBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(711, 55);
-            this.maskedTextBox1.TabIndex = 18;
+            this.emplyNewClockIn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.emplyNewClockIn.Location = new System.Drawing.Point(723, 94);
+            this.emplyNewClockIn.Margin = new System.Windows.Forms.Padding(4);
+            this.emplyNewClockIn.Name = "emplyNewClockIn";
+            this.emplyNewClockIn.Size = new System.Drawing.Size(711, 55);
+            this.emplyNewClockIn.TabIndex = 18;
             // 
             // tableLayoutPanel21
             // 
             this.tableLayoutPanel21.ColumnCount = 2;
             this.tableLayoutPanel21.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel21.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel21.Controls.Add(this.button2, 1, 0);
+            this.tableLayoutPanel21.Controls.Add(this.confirmTimesheetEditButton, 1, 0);
             this.tableLayoutPanel21.Controls.Add(this.label59, 0, 0);
             this.tableLayoutPanel21.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel21.Location = new System.Drawing.Point(4, 465);
@@ -830,17 +1261,18 @@
             this.tableLayoutPanel21.Size = new System.Drawing.Size(1438, 54);
             this.tableLayoutPanel21.TabIndex = 4;
             // 
-            // button2
+            // confirmTimesheetEditButton
             // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.button2.Location = new System.Drawing.Point(1103, 4);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(331, 46);
-            this.button2.TabIndex = 18;
-            this.button2.Text = "Confirm Edit";
-            this.button2.UseVisualStyleBackColor = true;
+            this.confirmTimesheetEditButton.Dock = System.Windows.Forms.DockStyle.Right;
+            this.confirmTimesheetEditButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.confirmTimesheetEditButton.Location = new System.Drawing.Point(1103, 4);
+            this.confirmTimesheetEditButton.Margin = new System.Windows.Forms.Padding(4);
+            this.confirmTimesheetEditButton.Name = "confirmTimesheetEditButton";
+            this.confirmTimesheetEditButton.Size = new System.Drawing.Size(331, 46);
+            this.confirmTimesheetEditButton.TabIndex = 18;
+            this.confirmTimesheetEditButton.Text = "Confirm Edit";
+            this.confirmTimesheetEditButton.UseVisualStyleBackColor = true;
+            this.confirmTimesheetEditButton.Click += new System.EventHandler(this.confirmTimesheetEditButton_Click);
             // 
             // label59
             // 
@@ -2228,8 +2660,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             this.scheduleGroupBox.ResumeLayout(false);
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel2.PerformLayout();
+            this.emplyScheduleTable.ResumeLayout(false);
+            this.emplyScheduleTable.PerformLayout();
             this.editTimesheetGroupBox.ResumeLayout(false);
             this.tableLayoutPanel10.ResumeLayout(false);
             this.tableLayoutPanel12.ResumeLayout(false);
@@ -2297,7 +2729,7 @@
         private System.Windows.Forms.Button logoutButton;
         private System.Windows.Forms.Label statusLabel;
         private System.Windows.Forms.GroupBox scheduleGroupBox;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.TableLayoutPanel emplyScheduleTable;
         private System.Windows.Forms.Label Saturday;
         private System.Windows.Forms.Label Friday;
         private System.Windows.Forms.Label Thursday;
@@ -2423,17 +2855,53 @@
         private System.Windows.Forms.Label label54;
         private System.Windows.Forms.Label label52;
         private System.Windows.Forms.Label label60;
-        private System.Windows.Forms.ComboBox comboBox7;
+        private System.Windows.Forms.ComboBox editTimesheetSelect;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button confirmTimesheetEditButton;
         private System.Windows.Forms.Label label59;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox4;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox3;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox emplyNewClockOut;
+        private System.Windows.Forms.MaskedTextBox emplyNewBreakEnd;
+        private System.Windows.Forms.MaskedTextBox emplyNewBreakStart;
+        private System.Windows.Forms.MaskedTextBox emplyNewClockIn;
         private System.Windows.Forms.Panel logoutPanel;
         private System.Windows.Forms.Label label51;
         private System.Windows.Forms.Button CancelLogoutButton;
         private System.Windows.Forms.Button ConfirmLogoutButton;
+        private System.Windows.Forms.ComboBox scheduleEmployeeSelect;
+        private System.Windows.Forms.Label label87;
+        private System.Windows.Forms.Label label86;
+        private System.Windows.Forms.Label label85;
+        private System.Windows.Forms.Label label84;
+        private System.Windows.Forms.Label label83;
+        private System.Windows.Forms.Label label82;
+        private System.Windows.Forms.Label label81;
+        private System.Windows.Forms.Label label80;
+        private System.Windows.Forms.Label label79;
+        private System.Windows.Forms.Label label78;
+        private System.Windows.Forms.Label label77;
+        private System.Windows.Forms.Label label76;
+        private System.Windows.Forms.Label label75;
+        private System.Windows.Forms.Label label74;
+        private System.Windows.Forms.Label label73;
+        private System.Windows.Forms.Label label72;
+        private System.Windows.Forms.Label label71;
+        private System.Windows.Forms.Label label70;
+        private System.Windows.Forms.Label label69;
+        private System.Windows.Forms.Label label68;
+        private System.Windows.Forms.Label label67;
+        private System.Windows.Forms.Label label66;
+        private System.Windows.Forms.Label label65;
+        private System.Windows.Forms.Label label64;
+        private System.Windows.Forms.Label label63;
+        private System.Windows.Forms.Label label62;
+        private System.Windows.Forms.Label label61;
+        private System.Windows.Forms.Label label58;
+        private System.Windows.Forms.Label label57;
+        private System.Windows.Forms.Label label55;
+        private System.Windows.Forms.Label label53;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label3;
     }
 }

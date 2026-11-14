@@ -21,6 +21,8 @@ namespace EmployeeTimeClock
         bool isOnBreak;
         DateTime startBreakTime;
         DateTime endBreakTime;
+        int[] emplyList;    // List of Employee ID's to be picked from
+        DateTime[,] emplySchedule;  // 2D Array that holds an Employee's schedule
 
         public Manager(Form parentForm, int ID)
         {
@@ -32,10 +34,14 @@ namespace EmployeeTimeClock
             isClocked = false;
             isOnBreak = false;
 
+            emplyList = new int[5];  // Testing array. Remove after database functionality implemented
+            emplySchedule = new DateTime[7, 5];
+
             //  Grab Information from the Database
             //      Grab clockIn/Out Time if available
             //      Grab start/end BreakTime if available
             //      Determine if currently Clocked or OnBreak
+            //      Grab list of all Employee IDs
 
             // Default Hidden Panels
             logoutPanel.Hide();
@@ -47,16 +53,13 @@ namespace EmployeeTimeClock
                 statusLabel.Text = "Status: Clocked In";
             //else    statusLabel.Text = "Status: Clocked Out";
 
-            //  Set the values of labels within the Form
-            //      Timesheet
-            /*if (clockInTime != null)
-                clockInTimeLabel.Text = clockInTime.ToString("t");
-            if (clockOutTime != null)
-                clockOutTimeLabel.Text = clockOutTime.ToString("t");
-            if (startBreakTime != null)
-                startBreakTimeLabel.Text = startBreakTime.ToString("t");
-            if (endBreakTime != null)
-                endBreakTimeLabel.Text = endBreakTime.ToString("t");*/
+            //  Set the values of dropdowns within the Form
+            //      View Employee Timesheet
+            foreach (int i in emplyList)
+                scheduleEmployeeSelect.Items.Add(i);
+            //      Edit Employee Timesheet
+            foreach (int i in emplyList)
+                editTimesheetSelect.Items.Add(i);
 
 
             scheduleGroupBox.BringToFront();
@@ -148,19 +151,97 @@ namespace EmployeeTimeClock
         }
 
 
-        private void PTORequestButton_Click(object sender, EventArgs e) {
-            PTORequestGroupBox.BringToFront();
-
-        }
-
+        // View Employee Schedule Functions
+        //      Allows the Manager to view the Schedule of their Employee's
+        // - - - - -    Samuel Griggs
         private void viewScheduleButton_Click(object sender, EventArgs e)
         {
             scheduleGroupBox.BringToFront();
         }
+        private void scheduleEmployeeSelect_SelectedIndexChanged(object sender, EventArgs e) {
+            int ID = scheduleEmployeeSelect.SelectedIndex;  // Chosen Employee
 
+            /*                                                          *
+             *      Add Database Functionality Here                     *
+             *                                                          *
+             *      Grab the schedule of the selected Employee          *
+             *      into emplySchedule[day, week]                       *
+             *                                                          */
+
+            for (int d = 0; d < 7; d++) {
+                for (int w = 0; w < 5; w++) {
+                    // If this day of the week isn't assigned (ie. last/previous month or not yet scheduled), skip
+                    if (emplySchedule[d, w].Equals(DateTime.MinValue))
+                        continue;
+
+                    emplyScheduleTable.GetControlFromPosition(d, w + 1).Text = emplySchedule[d, w].ToString("t");
+                }
+            }
+        }
+
+
+        
+
+        // Edit Timesheet Functions
+        //      Allows the Manager to edit the Timesheet of an Employee
+        // - - - - -    Samuel Griggs
         private void editTimesheetButton_Click(object sender, EventArgs e)
         {
             editTimesheetGroupBox.BringToFront();
+        }
+        private void confirmTimesheetEditButton_Click(object sender, EventArgs e) {
+            int ID = int.Parse(editTimesheetSelect.SelectedItem.ToString());
+            string newClockIn, newClockOut;
+            string newBreakStart, newBreakEnd;
+            try {
+                // Values must be between 0 and 2400
+                if (int.Parse(emplyNewClockIn.Text) >= 0 && int.Parse(emplyNewClockIn.Text) <= 2400 && int.Parse(emplyNewClockOut.Text) >= 0 && int.Parse(emplyNewClockOut.Text) <= 2400) {
+                    // Clock In and Clock out are valid values
+                    if (int.Parse(emplyNewClockOut.Text) > int.Parse(emplyNewClockIn.Text)) {
+                        // Clock In and Clock Out are within a valid time frame
+                        newClockIn = emplyNewClockIn.Text;
+                        newClockOut = emplyNewClockOut.Text;
+                    }
+                    else
+                        throw new FormatException();
+
+
+                }
+                else
+                    throw new FormatException();
+
+                // Clock In and Out must be valid values at this point, otherwise an Exception would have been thrown
+                if(int.Parse(emplyNewBreakStart.Text) >= int.Parse(newClockIn) && int.Parse(emplyNewBreakEnd.Text) <= int.Parse(newClockOut)) {
+                    // Break start and end within the clockin and out times
+                    if(int.Parse(emplyNewBreakStart.Text) <= int.Parse(emplyNewClockOut.Text)) {
+                        // Break over a valid period
+                        newBreakStart = emplyNewBreakStart.Text;
+                        newBreakEnd = emplyNewBreakEnd.Text;
+                    }
+                    else
+                        throw new FormatException();
+                }
+                else 
+                    throw new FormatException();
+
+                // New values must be valid as no exceptions have been thrown yet.
+
+                /*                                              *
+                 *      Add Database Functionality Here         *
+                 *                                              */
+
+
+            }
+            catch(FormatException) {
+                MessageBox.Show("Invalid times. Please enter all values in 2400 Hour Format.");
+            }
+            catch {
+
+            }
+        }
+
+        private void editScheduleButton_Click(object sender, EventArgs e) {
+            editScheduleGroupBox.BringToFront();
         }
 
         private void calculatePaymentButton_Click(object sender, EventArgs e)
@@ -173,10 +254,7 @@ namespace EmployeeTimeClock
             generateScheduleGroupBox.BringToFront();
         }
 
-        private void editScheduleButton_Click(object sender, EventArgs e)
-        {
-            editScheduleGroupBox.BringToFront();
-        }
+        
 
         private void availabilityButton_Click(object sender, EventArgs e)
         {
@@ -188,7 +266,11 @@ namespace EmployeeTimeClock
             viewTimesheetGroupBox.BringToFront();
         }
 
-        
+        private void PTORequestButton_Click(object sender, EventArgs e) {
+            PTORequestGroupBox.BringToFront();
+
+        }
+
         // Miscellaneous Functions
 
         // updateStatus
