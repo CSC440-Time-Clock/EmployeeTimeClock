@@ -105,7 +105,7 @@ The generator skips past dates. It also preserves today's schedule if any shift 
 - Attendance policy: 0.5 points for clocking in over 15 minutes late, leaving over 15 minutes early, or working over 15 minutes past the scheduled end; 1 point for a no-show
 - No-show points are inferred when a scheduled shift has ended and its grace period passed without a clock-in, unless the employee has approved PTO. The check runs when a manager opens the screen. If the employee later clocks in, the inferred no-show is reversed.
 - The payment screen estimates gross pay as recorded worked hours multiplied by the stored hourly rate. It does not issue payments or calculate taxes, deductions, or overtime.
-- The pay screen uses the previous complete Monday-through-Sunday period. Schedule weeks are Sunday-through-Saturday.
+- The pay screen defaults to the previous complete Sunday-through-Saturday period and lets the manager choose any completed week from the past six months.
 - NTP time sync is attempted when a user signs in and refreshed periodically. If unavailable, the app uses the computer's local clock. Sync status is written to Visual Studio's Debug Output, not shown in the GUI.
 
 ## Project notes

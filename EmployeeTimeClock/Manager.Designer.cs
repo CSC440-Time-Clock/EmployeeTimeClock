@@ -164,6 +164,9 @@
             this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
             this.button3 = new System.Windows.Forms.Button();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.paymentWeekSelect = new System.Windows.Forms.ComboBox();
+            this.paymentEmployeeLabel = new System.Windows.Forms.Label();
+            this.paymentWeekLabel = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label50 = new System.Windows.Forms.Label();
             this.viewAvailabilityGroupBox = new System.Windows.Forms.GroupBox();
@@ -1868,17 +1871,25 @@
             // 
             // tableLayoutPanel11
             // 
-            this.tableLayoutPanel11.ColumnCount = 1;
-            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel11.Controls.Add(this.button3, 0, 3);
-            this.tableLayoutPanel11.Controls.Add(this.comboBox2, 0, 1);
+            this.tableLayoutPanel11.ColumnCount = 2;
+            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel11.Controls.Add(this.label20, 0, 0);
-            this.tableLayoutPanel11.Controls.Add(this.label50, 0, 2);
+            this.tableLayoutPanel11.SetColumnSpan(this.label20, 2);
+            this.tableLayoutPanel11.Controls.Add(this.paymentEmployeeLabel, 0, 1);
+            this.tableLayoutPanel11.Controls.Add(this.paymentWeekLabel, 1, 1);
+            this.tableLayoutPanel11.Controls.Add(this.comboBox2, 0, 2);
+            this.tableLayoutPanel11.Controls.Add(this.paymentWeekSelect, 1, 2);
+            this.tableLayoutPanel11.Controls.Add(this.label50, 0, 3);
+            this.tableLayoutPanel11.SetColumnSpan(this.label50, 2);
+            this.tableLayoutPanel11.Controls.Add(this.button3, 0, 4);
+            this.tableLayoutPanel11.SetColumnSpan(this.button3, 2);
             this.tableLayoutPanel11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel11.Location = new System.Drawing.Point(3, 41);
             this.tableLayoutPanel11.Name = "tableLayoutPanel11";
-            this.tableLayoutPanel11.RowCount = 4;
+            this.tableLayoutPanel11.RowCount = 5;
             this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
             this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
             this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
@@ -1901,8 +1912,34 @@
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(3, 63);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(1529, 46);
+            this.comboBox2.Size = new System.Drawing.Size(761, 46);
             this.comboBox2.TabIndex = 3;
+            // configure the manager payment week selector -H
+            // 
+            this.paymentWeekSelect.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.paymentWeekSelect.FormattingEnabled = true;
+            this.paymentWeekSelect.Location = new System.Drawing.Point(770, 108);
+            this.paymentWeekSelect.Name = "paymentWeekSelect";
+            this.paymentWeekSelect.Size = new System.Drawing.Size(761, 46);
+            this.paymentWeekSelect.TabIndex = 4;
+            // identify the employee selector in the payment screen -H
+            // 
+            this.paymentEmployeeLabel.AutoSize = true;
+            this.paymentEmployeeLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.paymentEmployeeLabel.Location = new System.Drawing.Point(3, 60);
+            this.paymentEmployeeLabel.Name = "paymentEmployeeLabel";
+            this.paymentEmployeeLabel.Size = new System.Drawing.Size(761, 45);
+            this.paymentEmployeeLabel.TabIndex = 1;
+            this.paymentEmployeeLabel.Text = "Employee";
+            // identify the pay week selector in the payment screen -H
+            // 
+            this.paymentWeekLabel.AutoSize = true;
+            this.paymentWeekLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.paymentWeekLabel.Location = new System.Drawing.Point(770, 60);
+            this.paymentWeekLabel.Name = "paymentWeekLabel";
+            this.paymentWeekLabel.Size = new System.Drawing.Size(761, 45);
+            this.paymentWeekLabel.TabIndex = 2;
+            this.paymentWeekLabel.Text = "Pay Week";
             // 
             // label20
             // 
@@ -1912,14 +1949,15 @@
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(1529, 60);
             this.label20.TabIndex = 0;
-            this.label20.Text = "Select the employee you wish to calculate payment for.";
+            this.label20.Text = "Select an employee and a completed week for the pay estimate.";
             // 
             // label50
             // 
-            this.label50.AutoSize = true;
-            this.label50.Location = new System.Drawing.Point(3, 120);
+            this.label50.AutoSize = false;
+            this.label50.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label50.Location = new System.Drawing.Point(3, 165);
             this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(256, 39);
+            this.label50.Size = new System.Drawing.Size(1529, 430);
             this.label50.TabIndex = 4;
             this.label50.Text = "Total Amount: $";
             // 
@@ -3165,6 +3203,10 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel20;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.ComboBox comboBox2;
+        // manager payment week selector displays complete Sunday-through-Saturday periods -H
+        private System.Windows.Forms.ComboBox paymentWeekSelect;
+        private System.Windows.Forms.Label paymentEmployeeLabel;
+        private System.Windows.Forms.Label paymentWeekLabel;
         private System.Windows.Forms.Label label50;
         private System.Windows.Forms.Button generateScheduleButton;
         private System.Windows.Forms.Button editTimesheetButton;

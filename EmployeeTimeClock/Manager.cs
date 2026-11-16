@@ -117,6 +117,16 @@ namespace EmployeeTimeClock
             if (scheduleMonthSelect.Items.Count > 0) scheduleMonthSelect.SelectedIndex = 0;
             loadManagerScheduleCalendar();
 
+            // list completed Sunday-to-Saturday pay weeks from the last six months -H
+            paymentWeekSelect.DropDownStyle = ComboBoxStyle.DropDownList;
+            DateTime currentPayWeekSunday = TimeClockStore.Now.Date.AddDays(-(int)TimeClockStore.Now.DayOfWeek);
+            DateTime oldestPayWeekDate = TimeClockStore.Now.Date.AddMonths(-6);
+            int daysUntilSunday = ((int)DayOfWeek.Sunday - (int)oldestPayWeekDate.DayOfWeek + 7) % 7;
+            DateTime oldestPayWeekSunday = oldestPayWeekDate.AddDays(daysUntilSunday);
+            for (DateTime weekStart = currentPayWeekSunday.AddDays(-7); weekStart >= oldestPayWeekSunday; weekStart = weekStart.AddDays(-7))
+                paymentWeekSelect.Items.Add(new WeekChoice { Start = weekStart });
+            if (paymentWeekSelect.Items.Count > 0) paymentWeekSelect.SelectedIndex = 0;
+
             // list the current Sunday-start week and future weeks through the next six months -H
             scheduleWeekSelect.DropDownStyle = ComboBoxStyle.DropDownList;
             DateTime currentSunday = TimeClockStore.Now.Date.AddDays(-(int)TimeClockStore.Now.DayOfWeek);
@@ -158,11 +168,11 @@ namespace EmployeeTimeClock
         {
             if (comboBox2.SelectedItem == null) { MessageBox.Show("Select an employee."); return; }
             TimeClockStore.User user = TimeClockStore.FindUser(GetSelectedEmployeeId(comboBox2));
-            // calculate the previous complete Monday-through-Sunday pay period -H
-            int daysSinceMonday = ((int)TimeClockStore.Now.DayOfWeek + 6) % 7;
-            DateTime thisMonday = TimeClockStore.Now.Date.AddDays(-daysSinceMonday);
-            DateTime from = thisMonday.AddDays(-7);
-            DateTime through = thisMonday.AddDays(-1);
+            // calculate pay from the selected complete Sunday-through-Saturday week -H
+            WeekChoice selectedPayWeek = paymentWeekSelect.SelectedItem as WeekChoice;
+            if (selectedPayWeek == null) { MessageBox.Show("Select a pay week."); return; }
+            DateTime from = selectedPayWeek.Start.Date;
+            DateTime through = from.AddDays(6);
             double hours = TimeClockStore.TotalHours(user.Id, from, through);
             // show attendance points alongside pay without changing the calculated wage amount -H
             decimal points = TimeClockStore.AttendancePoints.Where(item => item.EmployeeId == user.Id).Sum(item => item.Points);
