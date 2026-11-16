@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,26 +15,34 @@ namespace EmployeeTimeClock
         public Login()
         {
             InitializeComponent();
+            // mask the password characters while the user types credentials -H
+            passwordTextBox.UseSystemPasswordChar = true;
         }
 
+        // authenticate against the in-memory accounts, then open the matching role-specific screen -H
         private void LoginButton_Click(object sender, EventArgs e)
         {
-            if (usernameTextBox.Text == "1")
+            TimeClockStore.User user = TimeClockStore.Authenticate(usernameTextBox.Text.Trim(), passwordTextBox.Text);
+            if (user == null)
             {
-                Manager managerForm = new Manager(this, 1);
-                managerForm.Show();
-                this.Hide();
+                MessageBox.Show("Invalid username or password.");
+                passwordTextBox.Clear();
+                return;
             }
-            else if (usernameTextBox.Text == "2")
+
+            // synchronize application time before opening screens that record work events -H
+            TimeClockStore.SynchronizeTime();
+
+            if (user.IsManager)
             {
-                Employee employeeForm = new Employee(this, 2);
-                employeeForm.Show();
-                this.Hide();
+                new Manager(this, user.Id).Show();
             }
             else
             {
-                MessageBox.Show("Invalid username or password.");
+                new Employee(this, user.Id).Show();
             }
+            passwordTextBox.Clear();
+            this.Hide();
         }
     }
 }
