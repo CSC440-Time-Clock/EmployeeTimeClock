@@ -44,20 +44,35 @@ ORDER BY role, display_name;
 ```
 
 | Role | Display name | Username | Password |
+
 | Manager | Morgan Manager | `mmana` | `admin123` |
+
 | Manager | Sam Thompson | `sthom` | `admin123` |
+
 | Manager | Drew Robinson | `drobi` | `admin123` |
+
 | Employee | John Smith | `jsmit` | `employee123` |
+
 | Employee | Alex Johnson | `ajohn` | `employee123` |
+
 | Employee | Taylor Smith | `tsmit` | `employee123` |
+
 | Employee | Jordan Williams | `jwill` | `employee123` |
+
 | Employee | Casey Brown | `cbrow` | `employee123` |
+
 | Employee | Morgan Davis | `mdavi` | `employee123` |
+
 | Employee | Riley Wilson | `rwils` | `employee123` |
+
 | Employee | Jamie Miller | `jmill` | `employee123` |
+
 | Employee | Avery Moore | `amoor` | `employee123` |
+
 | Employee | Cameron Taylor | `ctayl` | `employee123` |
+
 | Employee | Quinn Anderson | `qande` | `employee123` |
+
 
 ## Employee features
 
